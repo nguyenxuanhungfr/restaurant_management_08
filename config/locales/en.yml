@@ -1,2 +1,23 @@
 en:
   hello: "Hello world"
+  home:
+    new_news: "Receive news"
+    enter_email: "Enter your email address and subscribe daily newsletter"
+    app_others: "Others application"
+    year: "2018"
+    luxury: "Luxury RestaurAnt"
+    all_info: ", All rights reserved , Design Minh Quang Nguyen"
+    menu: "Menu"
+    home: "Home"
+    header:
+      address: "Address : 124 , Vinh Tuy district, Ha Noi city"
+      phone: "Phone: +84.1647419056"
+      book_now: "Book"
+      menu: "Menu"
+    exlore: "Explore"
+    food_menu: "Food Menu"
+    see: "View"
+    rating: "Rating"
+    phone: "0164749056"
+    call: "CALL US NOW FOR"
+    home_deliver: "HOME DELIVERY"

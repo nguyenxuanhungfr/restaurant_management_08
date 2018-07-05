@@ -4707,7 +4707,7 @@ small {
     line-height: 22px;
     margin-left: 50px;
     color:#5c6369;
-    
+
 }
 #our-spscial-pro-recipies p{
     float: left;
@@ -4926,4 +4926,10 @@ small {
     font-weight: bold;
     color:black;
     font-size: 16px;
+}
+.footer_info--white{
+    color:#93989e
+}
+.under_slide--weight{
+    color:#fea100 ; font-weight: bold;
 }
