@@ -1,0 +1,125 @@
+<section>
+  <div class="ed-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="ed-com-t1-left">
+            <ul>
+              <li>
+                <a href=""><%= t "home.header.address" %></a>
+              </li>
+              <li>
+                <a href=""><%= t "home.header.phone" %></a>
+              </li>
+            </ul>
+          </div>
+          <div class="ed-com-t1-right">
+            <ul>
+              <li class="cart">
+                <%= image_tag("icon1.png") %>
+                <a href="">
+                  <number class="number-cart">1</number>
+                </a>
+              </li>
+              <li class="book-table">
+                <div class="datban-boder">
+                  <%= image_tag("icon2.png") %>
+                  <%= link_to t("home.header.book_now"), root_path  %>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="top-logo affix" data-spy="affix" data-offset-top="250">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="wed-logo">
+            <a href="">
+              <%= image_tag("logo.png") %>
+            </a>
+          </div>
+          <div class="main-menu">
+            <ul>
+              <li>
+                <%= link_to t("home.home"), root_path  %>
+              </li>
+              <li class="cour-menu">
+                <a href="Menu_mixed.html" class="mm-arr"><%= link_to t("home.header.menu"), root_path  %></a>
+                <div class="mm-pos">
+                  <div class="cour-mm m-menu" style="display: none;">
+                    <div class="m-menu-inn">
+                      <div class="mm1-com mm1-cour-com mm1-s3">
+                        <h4>Món nướng</h4>
+                        <ul>
+                          <li>
+                            <a href="">Nướng ngũ vị</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="swiper-container swiper-container-v">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <%= image_tag("bcdc271015f82896842a14b78c0dac64.jpg") %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="info-contact-pro-main">
+  <div class="container">
+    <div class="col-xs-4 col-sm-4 col-md-3 col-lg-4">
+      <div class="menu-img-pro-info">
+        <%= image_tag("img1.png") %>
+        <p><%= t "home.exlore" %>
+          <br/><%= t "home.food_menu" %></p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3">
+        <div class="item-info-banner">
+          <div class="fix-width-info">
+            <%= image_tag("icon3.png") %>
+            <p><%= t "home.see" %>
+              <br>
+              <span class="under_slide--weight"><%= t "rating" %></span>
+            </p>
+            <div class="fix-mob">
+              <%= image_tag("icon15.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3">
+        <div class="item-info-banner2">
+          <div class="fix-width-info">
+            <%= image_tag("icon4.png") %>
+            <p><%= t "home.call" %></p>
+            <h2><%= t "home.home_deliver" %></h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-2 col-sm-2 col-md-1 col-lg-2">
+        <div class="item-info-banner3">
+          <h2><%= t "home.phone" %></h2>
+        </div>
+      </div>
+    </div>
+  </section>
