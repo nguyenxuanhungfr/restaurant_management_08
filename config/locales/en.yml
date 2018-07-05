@@ -13,6 +13,8 @@ en:
       address: "Address : 124 , Vinh Tuy district, Ha Noi city"
       phone: "Phone: +84.1647419056"
       book_now: "Book"
+      sign_up: "Sign Up"
+      login: "Login"
       menu: "Menu"
     exlore: "Explore"
     food_menu: "Food Menu"
@@ -21,3 +23,16 @@ en:
     phone: "0164749056"
     call: "CALL US NOW FOR"
     home_deliver: "HOME DELIVERY"
+  messages:
+    error: "messages_errors"
+    warning_size: "Warning size error"
+  users:
+    register: "Create a acount"
+    user_name: "User Name"
+    email: "Email"
+    address: "Address"
+    phone: "Phone"
+    password: "Password"
+    password_confirmation: "Password Confirmation"
+  flash:
+    success_create_user: "Create success user"
