@@ -36,3 +36,5 @@ en:
     password_confirmation: "Password Confirmation"
   flash:
     success_create_user: "Create success user"
+  admin:
+    base_title: "Restaurant Management"
