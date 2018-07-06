@@ -64,17 +64,17 @@
                 <div class="mm-pos">
                   <div class="cour-mm m-menu" style="display: none;">
                     <div class="m-menu-inn">
-                      <div class="mm1-com mm1-cour-com mm1-s3">
-                        <h4>Món nướng</h4>
-                        <ul>
-                          <li>
-                            <a href="">Nướng ngũ vị</a>
-                          </li>
-                        </ul>
-                      </div>
+                      <% @menus.each do |menu|  %>
+                        <div class="mm1-com mm1-cour-com mm1-s3">
+                          <h4><%= link_to menu.name, menu_path(menu) %></h4>
+                        </div>
+                      <% end %>
                     </div>
                   </div>
                 </div>
+              </li>
+              <li>
+                <%= link_to t("home.table"), root_path  %>
               </li>
             </ul>
           </div>
