@@ -4924,25 +4924,32 @@ small {
 .khuyenmai  {
   height: 210px;
 }
-.khuyenmai h1{
-  font-size: 28px;
+.khuyenmai h1 {
   color:white;
-  text-align: center;
-  margin-top:-90px;
+  font-size: 28px;
   margin-bottom: 50px;
+  margin-top:-90px;
+  text-align: center;
   text-shadow: 0px 0px 10px #000;
 }
 
-.khuyenmai p{
-  float: left;
-  margin: 18px 40px 0px 20px;
-  font-weight: bold;
+.khuyenmai p {
   color:black;
+  float: left;
   font-size: 16px;
+  font-weight: bold;
+  margin: 18px 40px 0px 20px;
 }
-.footer_info--white{
+.footer_info--white {
   color:#93989e
 }
-.under_slide--weight{
-  color:#fea100 ; font-weight: bold;
+.under_slide--weight {
+  color:#fea100;
+  font-weight: bold;
+}
+
+.btn-login {
+  background: #fea100 !important;
+  margin: 10px 0px 10px 5px;
+  padding: 10px 20px;
 }

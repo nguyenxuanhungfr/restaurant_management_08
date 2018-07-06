@@ -16,27 +16,30 @@
           <div class="ed-com-t1-right">
             <ul>
               <li class="cart">
-                <%= image_tag("icon1.png") %>
+                <%= image_tag "icon1.png" %>
                 <a href="">
                   <number class="number-cart">1</number>
                 </a>
               </li>
               <li class="book-table">
                 <div class="datban-boder">
-                  <%= image_tag("icon2.png") %>
-                  <%= link_to t("home.header.book_now"), root_path  %>
+                  <%= image_tag "icon2.png" %>
+                  <%= link_to t("home.header.book_now"), root_path %>
                 </div>
               </li>
               <% if logged_in? %>
                 <li class="book-user">
-                  <%= link_to current_user.name, root_path  %>
+                  <%= link_to current_user.name, root_path %>
+                </li>
+                <li class="book-user">
+                  <%= link_to t("users.logout"), logout_path, method: :delete %>
                 </li>
               <% else %>
                 <li class="book-user">
-                  <%= link_to t("home.header.sign_up"), new_user_path  %>
+                  <%= link_to t("home.header.sign_up"), new_user_path %>
                 </li>
                 <li class="book-user">
-                  <%= link_to t("home.header.login"), root_path  %>
+                  <%= link_to t("home.header.login"), login_path %>
                 </li>
               <% end %>
             </ul>
@@ -51,7 +54,7 @@
         <div class="col-md-12">
           <div class="wed-logo">
             <a href="">
-              <%= image_tag("logo.png") %>
+              <%= image_tag "logo.png" %>
             </a>
           </div>
           <div class="main-menu">
@@ -89,7 +92,7 @@
       <div class="swiper-container swiper-container-v">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <%= image_tag("bcdc271015f82896842a14b78c0dac64.jpg") %>
+            <%= image_tag "bcdc271015f82896842a14b78c0dac64.jpg" %>
           </div>
         </div>
       </div>
@@ -100,7 +103,7 @@
   <div class="container">
     <div class="col-xs-4 col-sm-4 col-md-3 col-lg-4">
       <div class="menu-img-pro-info">
-        <%= image_tag("img1.png") %>
+        <%= image_tag "img1.png" %>
         <p><%= t "home.exlore" %>
           <br/><%= t "home.food_menu" %></p>
         </div>
@@ -108,13 +111,13 @@
       <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3">
         <div class="item-info-banner">
           <div class="fix-width-info">
-            <%= image_tag("icon3.png") %>
+            <%= image_tag "icon3.png" %>
             <p><%= t "home.see" %>
               <br>
               <span class="under_slide--weight"><%= t "rating" %></span>
             </p>
             <div class="fix-mob">
-              <%= image_tag("icon15.png") %>
+              <%= image_tag "icon15.png" %>
             </div>
           </div>
         </div>
@@ -122,7 +125,7 @@
       <div class="col-xs-12 col-sm-3 col-md-4 col-lg-3">
         <div class="item-info-banner2">
           <div class="fix-width-info">
-            <%= image_tag("icon4.png") %>
+            <%= image_tag "icon4.png" %>
             <p><%= t "home.call" %></p>
             <h2><%= t "home.home_deliver" %></h2>
           </div>
