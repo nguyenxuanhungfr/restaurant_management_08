@@ -5,6 +5,7 @@ validate:
   content_max_length: 50
 settings:
   per_page: 4
+  remember: 1
   limit_product: 12
   limit_product_slibar: 3
   max_value_input: 1

@@ -28,11 +28,18 @@ en:
     warning_size: "Warning size error"
   users:
     register: "Create a acount"
+    login: "Login"
+    log_out: "Logout"
+    login_suceess: "Login success"
+    logout_suceess: "Logout success"
     user_name: "User Name"
     email: "Email"
     address: "Address"
     phone: "Phone"
+    remember: "Remember me on this computer"
     password: "Password"
+    title_login: "Log in"
+    invalid_login: "Invalid email/password combination"
     password_confirmation: "Password Confirmation"
   flash:
     success_create_user: "Create success user"
