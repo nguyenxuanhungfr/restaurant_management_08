@@ -140,8 +140,9 @@ ActiveRecord::Schema.define(version: 20180704083222) do
     t.string "email"
     t.string "address"
     t.string "phone"
-    t.string "password"
+    t.string "password_digest"
     t.string "image"
+    t.string "remember_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

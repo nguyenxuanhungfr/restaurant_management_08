@@ -27,6 +27,18 @@
                   <%= link_to t("home.header.book_now"), root_path  %>
                 </div>
               </li>
+              <% if logged_in? %>
+                <li class="book-user">
+                  <%= link_to current_user.name, root_path  %>
+                </li>
+              <% else %>
+                <li class="book-user">
+                  <%= link_to t("home.header.sign_up"), new_user_path  %>
+                </li>
+                <li class="book-user">
+                  <%= link_to t("home.header.login"), root_path  %>
+                </li>
+              <% end %>
             </ul>
           </div>
         </div>
