@@ -8,9 +8,9 @@ module SessionsHelper
   end
 
   def current_user
-    if (user_id = session[:user_id])
+    if user_id = session[:user_id]
       @current_user ||= User.find_by id: user_id
-    elsif (user_id = cookies.signed[:user_id])
+    elsif user_id = cookies.signed[:user_id]
       user = User.find_by id: user_id
       if user && user.authenticated?(cookies[:remember_token])
         log_in user
@@ -21,8 +21,8 @@ module SessionsHelper
 
   def forget user
     user.forget
-    cookies.delete(:user_id)
-    cookies.delete(:remember_token)
+    cookies.delete :user_id
+    cookies.delete :remember_token
   end
 
   def remember user
@@ -36,12 +36,52 @@ module SessionsHelper
   end
 
   def log_out
-    forget(current_user)
-    session.delete(:user_id)
+    forget current_user
+    session.delete :user_id
     @current_user = nil
   end
 
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def redirect_back_or default
+    redirect_to session[:forwarding_url] || default
+    session.delete :forwarding_url
+  end
+
+  def log_in_admin admin
+    session[:admin_id] = admin.id
+  end
+
+  def current_admin? admin
+    admin == current_admin
+  end
+
+  def current_admin
+    if admin_id = session[:admin_id]
+      @current_admin ||= Staff.find_by id: admin_id
+    elsif admin_id = cookies.signed[:admin_id]
+      admin = Staff.find_by id: admin_id
+      if admin && admin.authenticated?(cookies[:remember_token])
+        log_in admin
+        @current_admin = admin
+      end
+    end
+  end
+
+  def remember_admin admin
+    admin.remember_admin
+    cookies.permanent.signed[:admin_id] = admin.id
+    cookies.permanent[:remember_token] = admin.remember_token
+  end
+
+  def logged_in_admin?
+    current_admin ? true : false
+  end
+
+  def log_out_admin
+    session.delete :admin_id
+    @current_admin = nil
   end
 end
