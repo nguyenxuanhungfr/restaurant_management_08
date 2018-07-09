@@ -5,6 +5,9 @@ validate:
   content_max_length: 50
 settings:
   per_page: 4
+  precision: 0
+  offset_dish: 0
+  limit_dish: 5
   remember: 1
   limit_product: 12
   limit_product_slibar: 3
@@ -14,5 +17,6 @@ settings:
   max_role: 2
   max_value_address: 100
   min_value_address: 4
+  default_image_product: "http://www.ulladulla-indian-restaurant.com/wp-content/uploads/2016/08/full-hd-wallpaper-food-2.jpg"
 setting_model:
   role_admin: 1

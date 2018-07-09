@@ -1,5 +1,7 @@
 en:
   hello: "Hello world"
+  menu:
+    load_more: "Load more"
   home:
     new_news: "Receive news"
     enter_email: "Enter your email address and subscribe daily newsletter"
@@ -26,6 +28,7 @@ en:
   messages:
     error: "messages_errors"
     warning_size: "Warning size error"
+    not_foud_menu: "Error ! Menu not found"
   users:
     register: "Create a acount"
     login: "Login"

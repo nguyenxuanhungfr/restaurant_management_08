@@ -63,18 +63,11 @@
                 <%= link_to t("home.home"), root_path  %>
               </li>
               <li class="cour-menu">
-                <a href="Menu_mixed.html" class="mm-arr"><%= link_to t("home.header.menu"), root_path  %></a>
+                <%= link_to t("home.header.menu"), "#"  %>
                 <div class="mm-pos">
-                  <div class="cour-mm m-menu" style="display: none;">
+                  <div class="cour-mm m-menu">
                     <div class="m-menu-inn">
-                      <div class="mm1-com mm1-cour-com mm1-s3">
-                        <h4>Món nướng</h4>
-                        <ul>
-                          <li>
-                            <a href="">Nướng ngũ vị</a>
-                          </li>
-                        </ul>
-                      </div>
+                      <%= load_menu_template(@menu).html_safe %>
                     </div>
                   </div>
                 </div>
