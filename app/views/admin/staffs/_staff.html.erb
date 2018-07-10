@@ -1,0 +1,26 @@
+<% staffs.each.with_index 1 do |staff, index| %>
+  <tr>
+    <td>
+      <%= index %>
+    </td>
+    <td>
+      <%= staff.name %>
+    </td>
+    <td>
+      <%= staff.image %>
+    </td>
+    <td>
+      <%= staff.email %>
+    </td>
+    <td>
+      <%= staff.role %>
+    </td>
+    <td>
+      <%= staff.created_at.strftime("%Y-%m-%d") %>
+    </td>
+    <td>
+      <%= link_to t("edit"), edit_admin_staff_path(staff),
+        class: "btn btn-primary" %>
+    </td>
+  </tr>
+<% end %>

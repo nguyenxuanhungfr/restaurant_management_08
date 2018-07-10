@@ -1,6 +1,8 @@
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
   <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-    <a class="navbar-brand brand-logo" href=""><%= image_tag("logo.png", :alt => "logo") %></a>
+    <%= link_to admin_root_url, class: "navbar-brand brand-logo" do %>
+      <%= image_tag("logo.png") %>
+    <% end %>
     <a class="navbar-brand brand-logo-mini" href="index.html"><%= image_tag("logo.png", :alt => "logo") %></a>
   </div>
   <div class="navbar-menu-wrapper d-flex align-items-stretch">

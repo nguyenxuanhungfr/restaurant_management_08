@@ -1,8 +1,10 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
-    <li class="nav-item nav-profile">
-    </li>
     <li class="nav-item">
+      <%= link_to admin_staffs_path, class: "nav-link" do %>
+        <span class="menu-title"><%= t "admin.staffs" %></span>
+        <i class="mdi mdi-calendar-blank menu-icon"></i>
+      <% end %>
     </li>
   </ul>
 </nav>
