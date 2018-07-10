@@ -1,0 +1,48 @@
+<%= provide :title, t("admin.list_users") %>
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="overflow_hidden">
+          <h1 class="float_left"><%= t "list_users" %></h1>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>
+                <%= t "admin.user.stt" %>
+              </th>
+              <th>
+                <%= t "admin.user.users" %>
+              </th>
+              <th>
+                <%= t "admin.user.images" %>
+              </th>
+              <th>
+                <%= t "admin.user.email" %>
+              </th>
+              <th>
+                <%= t "admin.user.phone" %>
+              </th>
+              <th>
+                <%= t "admin.user.address" %>
+              </th>
+              <th>
+                <%= t "admin.user.createdate" %>
+              </th>
+              <th>
+                <%= t "admin.user.actions" %>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "user", users: @users %>
+          </tbody>
+        </table>
+        <div class="margin_bottom20px float_right">
+          <%= paginate @users, theme: "twitter-bootstrap-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

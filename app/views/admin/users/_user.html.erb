@@ -1,0 +1,29 @@
+<% users.each.with_index 1 do |user, index| %>
+  <tr>
+    <td>
+      <%= index %>
+    </td>
+    <td>
+      <%= user.name %>
+    </td>
+    <td>
+      <%= user.image %>
+    </td>
+    <td>
+      <%= user.email %>
+    </td>
+    <td>
+      <%= user.phone %>
+    </td>
+    <td>
+      <%= user.address %>
+    </td>
+    <td>
+      <%= user.created_at.strftime("%Y-%m-%d") %>
+    </td>
+    <td>
+      <%= link_to t("edit"), edit_admin_user_path(user),
+        class: "btn btn-primary" %>
+    </td>
+  </tr>
+<% end %>
