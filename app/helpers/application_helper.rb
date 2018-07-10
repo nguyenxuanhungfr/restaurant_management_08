@@ -34,6 +34,11 @@ module ApplicationHelper
     number_to_currency price, precision: Settings.settings.precision, delimiter: "."
   end
 
+  def load_user_images review
+    image = review.image || Settings.settings.default_image_user
+    image_tag image
+  end
+
   def gravatar_for_dish dish
     if dish.images.first.nil?
       image_tag Settings.settings.default_image_product,

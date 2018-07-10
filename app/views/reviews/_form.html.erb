@@ -1,0 +1,23 @@
+<%= form_for review, remote: :true do |f| %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="rating">
+       <% default_st = Settings.settings.default_star %>
+       <% default_st.times do |point| %>
+         <%= f.radio_button :point, default_st-point, class: "star star-#{default_st-point} star_point", id: "star-#{default_st-point}" %>
+         <label class="star star-<%= default_st-point %>" for="star-<%= default_st-point %>" title="star-<%= default_st-point %>"></label>
+       <% end %>
+     </div>
+   </div>
+    <div class="col-md-12 col-sm-12">
+      <div class="form-group">
+        <%= f.hidden_field :dish_id, value: @dish.id %>
+        <%= f.text_area :comment, class: "form-control",
+          rows: Settings.settings.default_rows_texta %>
+      </div>
+      <div class="form-row">
+        <%= f.button :submit, type: :submit, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

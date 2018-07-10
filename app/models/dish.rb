@@ -8,4 +8,8 @@ class Dish < ApplicationRecord
   belongs_to :category
 
   scope :ordered, ->{order created_at: :desc}
+
+  def rating point
+    update_attributes average_point: point
+  end
 end

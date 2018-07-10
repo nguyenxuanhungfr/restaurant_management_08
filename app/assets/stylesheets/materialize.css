@@ -7,7 +7,7 @@
  * V2.0: 24/08/2017
  * Author: RN53 Themes
  * Email:      rn53themes@gmail.com
- * Website:    http://www.rn53themes.net 
+ * Website:    http://www.rn53themes.net
  -----------------------------------------------*/
 
 .materialize-red {
@@ -1622,10 +1622,10 @@
 html {
     font-family: sans-serif;
     /* 1 */
-    
+
     -ms-text-size-adjust: 100%;
     /* 2 */
-    
+
     -webkit-text-size-adjust: 100%;
     /* 2 */
 }
@@ -1671,7 +1671,7 @@ progress,
 video {
     display: inline-block;
     /* 1 */
-    
+
     vertical-align: baseline;
     /* 2 */
 }
@@ -1839,10 +1839,10 @@ select,
 textarea {
     color: inherit;
     /* 1 */
-    
+
     font: inherit;
     /* 2 */
-    
+
     margin: 0;
     /* 3 */
 }
@@ -1878,7 +1878,7 @@ input[type="reset"],
 input[type="submit"] {
     -webkit-appearance: button;
     /* 2 */
-    
+
     cursor: pointer;
     /* 3 */
 }
@@ -1919,7 +1919,7 @@ input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box;
     /* 1 */
-    
+
     padding: 0;
     /* 2 */
 }
@@ -1941,7 +1941,7 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
     -webkit-appearance: textfield;
     /* 1 */
-    
+
     box-sizing: content-box;
     /* 2 */
 }
@@ -1972,7 +1972,7 @@ fieldset {
 legend {
     border: 0;
     /* 1 */
-    
+
     padding: 0;
     /* 2 */
 }
@@ -3492,7 +3492,7 @@ nav {
     color: #fff;
     background-color: #ee6e73;
     /* width: 100%; */
-    
+
     height: 56px;
     line-height: 56px;
 }
@@ -3680,7 +3680,7 @@ nav .input-field label.active i {
     nav a.button-collapse,
     nav a.button-collapse i {
         /* height: 64px; */
-        
+
         line-height: 64px;
     }
     .navbar-fixed {
@@ -4937,12 +4937,12 @@ label {
 }
 :-moz-placeholder {
     /* Firefox 18- */
-    
+
     color: #d1d1d1;
 }
 ::-moz-placeholder {
     /* Firefox 19+ */
-    
+
     color: #d1d1d1;
 }
 :-ms-input-placeholder {
@@ -4965,15 +4965,15 @@ input[type=search],
 textarea.materialize-textarea {
     border: none;
     /* border-bottom: 1px solid #9e9e9e; */
-    
+
     outline: none;
     /* height: 3rem; */
-    
+
     width: 100%;
     /* font-size: 1rem; */
     /* margin: 0 0 20px 0; */
     /* padding: 0; */
-    
+
     box-shadow: none;
     transition: all 0.3s;
 }
@@ -5327,7 +5327,7 @@ textarea.materialize-textarea {
     overflow-y: hidden;
     /* prevents scroll bar flash */
     /* prevents text jump on Enter keypress */
-    
+
     resize: none;
     min-height: 3rem;
 }
@@ -5337,10 +5337,10 @@ textarea.materialize-textarea {
     word-wrap: break-word;
     overflow-wrap: break-word;
     /* future version of deprecated 'word-wrap' */
-    
+
     padding-top: 1.2rem;
     /* prevents text jump on Enter keypress */
-    
+
     position: absolute;
     top: 0;
 }
@@ -5370,157 +5370,12 @@ textarea.materialize-textarea {
 /* Radio Buttons
    ========================================================================== */
 
-[type="radio"]:not(:checked),
-[type="radio"]:checked {
-    opacity: 1;
-}
-[type="radio"]:not(:checked) + label,
-[type="radio"]:checked + label {
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    display: inline-block;
-    height: 25px;
-    line-height: 25px;
-    font-size: 1rem;
-    transition: .28s ease;
-    /* webkit (konqueror) browsers */
-    
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-[type="radio"] + label:before,
-[type="radio"] + label:after {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 4px;
-    width: 16px;
-    height: 16px;
-    z-index: 0;
-    transition: .28s ease;
-}
-/* Unchecked styles */
 
-[type="radio"]:not(:checked) + label:before,
-[type="radio"]:not(:checked) + label:after,
-[type="radio"]:checked + label:before,
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:before,
-[type="radio"].with-gap:checked + label:after {
-    border-radius: 50%;
-}
-[type="radio"]:not(:checked) + label:before,
-[type="radio"]:not(:checked) + label:after {
-    border: 2px solid #5a5a5a;
-}
-[type="radio"]:not(:checked) + label:after {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-}
-/* Checked styles */
-
-[type="radio"]:checked + label:before {
-    border: 2px solid transparent;
-}
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:before,
-[type="radio"].with-gap:checked + label:after {
-    border: 2px solid #14addb;
-}
-[type="radio"]:checked + label:after,
-[type="radio"].with-gap:checked + label:after {
-    background-color: #14addb;
-}
-[type="radio"]:checked + label:after {
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
-}
-/* Radio With gap */
-
-[type="radio"].with-gap:checked + label:after {
-    -webkit-transform: scale(0.5);
-    transform: scale(0.5);
-}
-/* Focused styles */
-
-[type="radio"].tabbed:focus + label:before {
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
-}
-/* Disabled Radio With gap */
-
-[type="radio"].with-gap:disabled:checked + label:before {
-    border: 2px solid rgba(0, 0, 0, 0.26);
-}
-[type="radio"].with-gap:disabled:checked + label:after {
-    border: none;
-    background-color: rgba(0, 0, 0, 0.26);
-}
-/* Disabled style */
-
-[type="radio"]:disabled:not(:checked) + label:before,
-[type="radio"]:disabled:checked + label:before {
-    background-color: transparent;
-    border-color: rgba(0, 0, 0, 0.26);
-}
-[type="radio"]:disabled + label {
-    color: rgba(0, 0, 0, 0.26);
-}
-[type="radio"]:disabled:not(:checked) + label:before {
-    border-color: rgba(0, 0, 0, 0.26);
-}
-[type="radio"]:disabled:checked + label:after {
-    background-color: rgba(0, 0, 0, 0.26);
-    border-color: #BDBDBD;
-}
 /***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label,
-/* show gold star when clicked */
-
-.rating:not(:checked) > label:hover,
-/* hover current star */
-
-.rating:not(:checked) > label:hover ~ label {
-    color: #14addb;
-}
-/* hover previous stars in list */
-
-.rating > input:checked + label:hover,
-/* hover current star when changing rating */
-
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-/* lighten current selection */
-
-.rating > input:checked ~ label:hover ~ label {
-    color: #14addb;
-}
 /***** CSS Magic to Highlight Stars on Hover *****/
 
-.rating > input:checked ~ label,
-/* show gold star when clicked */
 
-.rating:not(:checked) > label:hover,
-/* hover current star */
-
-.rating:not(:checked) > label:hover ~ label {
-    color: #14addb;
-}
-/* hover previous stars in list */
-
-.rating > input:checked + label:hover,
-/* hover current star when changing rating */
-
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-/* lighten current selection */
-
-.rating > input:checked ~ label:hover ~ label {
-    color: #14addb;
-}
 /* Checkboxes
    ========================================================================== */
 /* CUSTOM CSS CHECKBOXES */
@@ -5551,13 +5406,13 @@ form p:last-child {
     font-size: 1rem;
     -webkit-user-select: none;
     /* webkit (safari, chrome) browsers */
-    
+
     -moz-user-select: none;
     /* mozilla browsers */
-    
+
     -khtml-user-select: none;
     /* webkit (konqueror) browsers */
-    
+
     -ms-user-select: none;
     /* IE10+ */
 }
@@ -5643,7 +5498,7 @@ form p:last-child {
     left: 0;
     position: absolute;
     /* .1s delay is for check animation */
-    
+
     transition: border .25s, background-color .25s, width .20s .1s, height .20s .1s, top .20s .1s, left .20s .1s;
     z-index: 1;
 }
@@ -5809,7 +5664,7 @@ select {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;	
+    user-select: none;
 }
 .select-wrapper span.caret {
     position: absolute;
@@ -5840,13 +5695,13 @@ select:disabled {
     cursor: default;
     -webkit-user-select: none;
     /* webkit (safari, chrome) browsers */
-    
+
     -moz-user-select: none;
     /* mozilla browsers */
-    
+
     -ms-user-select: none;
     /* IE10+ */
-    
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .select-wrapper i {
@@ -6000,7 +5855,7 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 }
 input[type=range] {
     /* fix for FF unable to apply focus style bug  */
-    
+
     border: 1px solid white;
     /*required for proper track sizing in FF*/
 }
@@ -6030,7 +5885,7 @@ input[type=range]::-ms-track {
     border-color: transparent;
     border-width: 6px 0;
     /*remove default tick marks*/
-    
+
     color: transparent;
 }
 input[type=range]::-ms-fill-lower {
@@ -6321,7 +6176,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .preloader-wrapper.active {
     /* duration: 360 * ARCTIME / (ARCSTARTROT + (360-ARCSIZE)) */
-    
+
     -webkit-animation: container-rotate 1568ms linear infinite;
     animation: container-rotate 1568ms linear infinite;
 }
@@ -6375,25 +6230,25 @@ input[type=range]:focus::-ms-fill-upper {
 
 .active .spinner-layer.spinner-blue {
     /* durations: 4 * ARCTIME */
-    
+
     -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, blue-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, blue-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-red {
     /* durations: 4 * ARCTIME */
-    
+
     -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, red-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, red-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-yellow {
     /* durations: 4 * ARCTIME */
-    
+
     -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, yellow-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, yellow-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .spinner-layer.spinner-green {
     /* durations: 4 * ARCTIME */
-    
+
     -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both, green-fade-in-out 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
@@ -6403,7 +6258,7 @@ input[type=range]:focus::-ms-fill-upper {
 .active .spinner-layer.spinner-yellow-only,
 .active .spinner-layer.spinner-green-only {
     /* durations: 4 * ARCTIME */
-    
+
     opacity: 1;
     -webkit-animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: fill-unfill-rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
@@ -6413,37 +6268,37 @@ input[type=range]:focus::-ms-fill-upper {
         -webkit-transform: rotate(135deg);
     }
     /* 0.5 * ARCSIZE */
-    
+
     25% {
         -webkit-transform: rotate(270deg);
     }
     /* 1   * ARCSIZE */
-    
+
     37.5% {
         -webkit-transform: rotate(405deg);
     }
     /* 1.5 * ARCSIZE */
-    
+
     50% {
         -webkit-transform: rotate(540deg);
     }
     /* 2   * ARCSIZE */
-    
+
     62.5% {
         -webkit-transform: rotate(675deg);
     }
     /* 2.5 * ARCSIZE */
-    
+
     75% {
         -webkit-transform: rotate(810deg);
     }
     /* 3   * ARCSIZE */
-    
+
     87.5% {
         -webkit-transform: rotate(945deg);
     }
     /* 3.5 * ARCSIZE */
-    
+
     to {
         -webkit-transform: rotate(1080deg);
     }
@@ -6455,43 +6310,43 @@ input[type=range]:focus::-ms-fill-upper {
         transform: rotate(135deg);
     }
     /* 0.5 * ARCSIZE */
-    
+
     25% {
         -webkit-transform: rotate(270deg);
         transform: rotate(270deg);
     }
     /* 1   * ARCSIZE */
-    
+
     37.5% {
         -webkit-transform: rotate(405deg);
         transform: rotate(405deg);
     }
     /* 1.5 * ARCSIZE */
-    
+
     50% {
         -webkit-transform: rotate(540deg);
         transform: rotate(540deg);
     }
     /* 2   * ARCSIZE */
-    
+
     62.5% {
         -webkit-transform: rotate(675deg);
         transform: rotate(675deg);
     }
     /* 2.5 * ARCSIZE */
-    
+
     75% {
         -webkit-transform: rotate(810deg);
         transform: rotate(810deg);
     }
     /* 3   * ARCSIZE */
-    
+
     87.5% {
         -webkit-transform: rotate(945deg);
         transform: rotate(945deg);
     }
     /* 3.5 * ARCSIZE */
-    
+
     to {
         -webkit-transform: rotate(1080deg);
         transform: rotate(1080deg);
@@ -6671,7 +6526,7 @@ input[type=range]:focus::-ms-fill-upper {
     height: 100%;
     border-width: 3px;
     /* STROKEWIDTH */
-    
+
     border-style: solid;
     border-color: inherit;
     border-bottom-color: transparent !important;
@@ -6697,13 +6552,13 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .active .circle-clipper.left .circle {
     /* duration: ARCTIME */
-    
+
     -webkit-animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: left-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
 .active .circle-clipper.right .circle {
     /* duration: ARCTIME */
-    
+
     -webkit-animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
     animation: right-spin 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
 }
@@ -6759,7 +6614,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 #spinnerContainer.cooldown {
     /* duration: SHRINK_TIME */
-    
+
     -webkit-animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0, 0.2, 1);
     animation: container-rotate 1568ms linear infinite, fade-out 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
