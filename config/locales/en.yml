@@ -2,6 +2,7 @@ en:
   hello: "Hello world"
   home:
     new_news: "Receive news"
+    dish_not_found: "Dish not found"
     enter_email: "Enter your email address and subscribe daily newsletter"
     app_others: "Others application"
     year: "2018"
@@ -18,6 +19,7 @@ en:
       menu: "Menu"
     exlore: "Explore"
     food_menu: "Food Menu"
+    not_found_dish: "Not found"
     table: "Table"
     see: "View"
     rating: "Rating"

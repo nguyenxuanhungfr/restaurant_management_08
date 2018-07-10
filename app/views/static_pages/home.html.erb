@@ -1,0 +1,17 @@
+<section id="background-pro-today-food">
+  <div class="container-fuild">
+    <h1>Today Special</h1>
+  </div>
+</section>
+<section id="blog-item" class="container">
+  <div id="myCarousel" class="carousel slide test" data-ride="false">
+    <div class="row">
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= render partial: "dishes/dish_special",
+            collection: @support.dish_slibar, as: :dish_special %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

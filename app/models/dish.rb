@@ -6,4 +6,6 @@ class Dish < ApplicationRecord
   has_many :reviews
   has_many :users, through: :reviews
   belongs_to :category
+
+  scope :ordered, ->{order created_at: :asc}
 end

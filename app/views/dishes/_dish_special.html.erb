@@ -1,0 +1,27 @@
+<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  <a href="">
+    <div class="ot-portfolio-item">
+      <figure class="effect-bubba">
+        <%= image_tag("img9.png") %>
+        <figcaption></figcaption>
+      </figure>
+    </div>
+    <div class="detail-text-food-today-pro">
+      <h1><%= dish_special.name %></h1>
+      <p><%= dish_special.description %></p>
+      <div class="main-order-food">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+          <%= link_to t("add_to_cart"), root_path,
+            remote: true, method: :post, class: "btn2 btn btn-primary" %>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div class="price-order-food-pro">
+            <h1><%= dish_special.price %>
+              <sup>$</sup>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,5 +1,7 @@
 class StaticPagesController < ApplicationController
   before_action :load_menu
 
-  def home; end
+  def home
+    @support = Supports::DishSupport.new
+  end
 end
