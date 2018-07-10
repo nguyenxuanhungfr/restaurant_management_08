@@ -1,0 +1,45 @@
+<%= provide :title, t("admin.list_staffs") %>
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="overflow_hidden">
+          <h1 class="float_left"><%= t "list_staffs" %></h1>
+        </div>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>
+                <%= t "admin.staff.stt" %>
+              </th>
+              <th>
+                <%= t "admin.staff.staffs" %>
+              </th>
+              <th>
+                <%= t "admin.staff.images" %>
+              </th>
+              <th>
+                <%= t "admin.staff.email" %>
+              </th>
+              <th>
+                <%= t "admin.staff.role" %>
+              </th>
+              <th>
+                <%= t "admin.staff.createdate" %>
+              </th>
+              <th>
+                <%= t "admin.staff.actions" %>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "staff", staffs: @staffs %>
+          </tbody>
+        </table>
+        <div class="margin_bottom20px float_right">
+          <%= paginate @staffs, theme: "twitter-bootstrap-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
