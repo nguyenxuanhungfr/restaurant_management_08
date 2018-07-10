@@ -8,7 +8,7 @@ class Admin::SessionsController < Admin::BaseController
 
   def create
     admin = Staff.find_by email: params[:session][:email].downcase
-    if admin && admin.authenticate(params[:session][:password]) && admin.role == Settings.setting_model.role_admin
+    if admin && admin.authenticate(params[:session][:password])
       log_in_admin admin
       redirect_back_or admin_root_url
     else

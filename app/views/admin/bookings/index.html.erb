@@ -1,49 +1,58 @@
-<%= provide :title, t("admin.list_staffs") %>
+<%= provide :title, t("admin.list_bookings") %>
 <div class="row">
   <div class="col-lg-12 grid-margin stretch-card">
     <div class="card">
       <div class="card-body">
         <div class="overflow_hidden">
-          <h1 class="float_left"><%= t "list_staffs" %></h1>
+          <h1 class="float_left"><%= t "list_bookings" %></h1>
         </div>
         <h3 class="title">
           <strong><%= t "admin.staff.total_staff" %></strong>
           <span class="red_color">
-            <%= @staffs.total_count ||= 0 %>
+            <%= @bookings.total_count ||= 0 %>
           </span>
         </h3>
         <table class="table table-bordered">
           <thead>
             <tr>
               <th>
-                <%= t "admin.staff.stt" %>
+                <%= t "admin.booking.stt" %>
               </th>
               <th>
-                <%= t "admin.staff.staffs" %>
+                <%= t "admin.booking.name" %>
               </th>
               <th>
-                <%= t "admin.staff.images" %>
+                <%= t "admin.booking.table" %>
               </th>
               <th>
-                <%= t "admin.staff.email" %>
+                <%= t "admin.booking.time_start" %>
               </th>
               <th>
-                <%= t "admin.staff.role" %>
+                <%= t "admin.booking.time_end" %>
               </th>
               <th>
-                <%= t "admin.staff.createdate" %>
+                <%= t "admin.booking.status" %>
               </th>
               <th>
-                <%= t "admin.staff.actions" %>
+                <%= t "admin.booking.receiver" %>
+              </th>
+              <th>
+                <%= t "admin.booking.address" %>
+              </th>
+              <th>
+                <%= t "admin.booking.phone" %>
+              </th>
+              <th>
+                <%= t "admin.booking.actions" %>
               </th>
             </tr>
           </thead>
           <tbody>
-            <%= render "staff", staffs: @staffs %>
+            <%= render "booking", bookings: @bookings %>
           </tbody>
         </table>
         <div class="margin_bottom20px float_right">
-          <%= paginate @staffs, theme: "twitter-bootstrap-3" %>
+          <%= paginate @bookings, theme: "twitter-bootstrap-3" %>
         </div>
       </div>
     </div>

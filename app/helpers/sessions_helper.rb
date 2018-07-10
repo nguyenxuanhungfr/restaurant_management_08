@@ -70,6 +70,10 @@ module SessionsHelper
     end
   end
 
+  def correct_admin? admin
+    admin == t("admin.staff.role_admin")
+  end
+
   def remember_admin admin
     admin.remember_admin
     cookies.permanent.signed[:admin_id] = admin.id
