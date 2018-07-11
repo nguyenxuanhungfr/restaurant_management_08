@@ -3630,7 +3630,9 @@ small {
 .item-featured-pro-main-mqn {
   border: 1px solid #e8edef;
   width: 370px;
-  height: 500px;
+  max-height: 500px;
+  padding: 20px;
+  position: relative;
 }
 
 .item-featured-pro-main-mqn img {
@@ -3666,9 +3668,8 @@ small {
 }
 
 .item-featured-pro-main-mqn p {
-  margin-left: 20px;
+  margin: 5px;
   font-style: 14px;
-  color: #5c6369;
 }
 
 .recipie-next-pro-detail {
@@ -4962,4 +4963,19 @@ small {
 
 .cour-mm .m-menu {
   display: none;
+}
+.table__vip--type_table{
+  top: 0;
+  position: absolute;
+  color: white;
+  border-radius: 50%;
+  width: auto;
+  background: $type_table_green;
+  right: 0;
+  padding: 10px;
+  font-weight: bold;
+}
+.table--style_paginate{
+  clear: both;
+  float: right;
 }

@@ -20,3 +20,5 @@ settings:
   default_image_product: "http://www.ulladulla-indian-restaurant.com/wp-content/uploads/2016/08/full-hd-wallpaper-food-2.jpg"
 setting_model:
   role_admin: 1
+table:
+  type_vip_table: 1

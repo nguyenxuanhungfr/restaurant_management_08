@@ -87,3 +87,8 @@ en:
         address: "Address"
         phone: "Phone"
         actions: "Actions"
+    table:
+        not_found_table: "Not found table"
+        table_for: "Quantity : "
+        book_now: "Book now"
+        table_vip: "VIP: More 10% fare"

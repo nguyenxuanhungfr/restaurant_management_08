@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :users
   resources :dishes
   resources :menus
+  resources :tables
   namespace :admin do
     root "static_pages#home"
     get "/login", to: "sessions#new"
