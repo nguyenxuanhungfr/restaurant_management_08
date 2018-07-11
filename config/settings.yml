@@ -23,3 +23,5 @@ settings:
   default_image_user: "https://png.icons8.com/dotty/2x/administrator-male.png"
 setting_model:
   role_admin: 1
+table:
+  type_vip_table: 1
