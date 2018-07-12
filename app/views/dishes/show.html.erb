@@ -1,0 +1,51 @@
+<section id="blog-main-mqn">
+  <div class="container">
+    <div class="col-xs-12 col-sm-6 col-md-7 col-lg-8">
+      <div class="item-post-blog-pro-mqn">
+        <div class="item-blog-mqn">
+          <%= gravatar_for_dish @dish %>
+        </div>
+        <div class="item-text-blog-mqn">
+          <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="date-post-item-blog">
+              <div class="item-date-post-blog">
+                <h1><%= @dish.created_at.strftime("%d") %></h1>
+                <h2><%= @dish.created_at.strftime("%Y") %></h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+            <div class="text-item-blog">
+              <h3><%= @dish.name %></h3>
+              <p><%= @dish.description %></p>
+            </div>
+
+            <div class="img-blog-detail-item-pro-mqn">
+              <%= render partial: "dishes/images_detail",
+              collection: @support.images, as: :images %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="like">
+            <%= image_tag "icon53.png" %>
+            <div class="text-like">
+              <p><%= @dish.average_point.round %></p>
+            </div>
+          </div>
+          <div class="media comment-box">
+            <div class="row">
+              <div class="load_user_comment">
+                <%= render partial: "reviews/comment",
+                collection: @support.comments, as: :reviews %>
+              </div>
+            </div>
+            <%= render "reviews/form", review: @review %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

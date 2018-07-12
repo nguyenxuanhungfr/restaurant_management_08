@@ -1,0 +1,20 @@
+<div class="col-md-2">
+  <div class="media-left">
+    <a href="#">
+     <%= load_user_images reviews %>
+    </a>
+  </div>
+</div>
+<div class="col-md-10">
+  <div class="media-body">
+    <h4 class="media-heading"><%= reviews.name %>
+    <%= image_tag "icon53.png", class: "heart_point" %>
+    <span><%= reviews.point %></span>
+    </h4>
+    <p><%= reviews.comment %>
+      <sub>
+        <%= time_ago_in_words reviews.created_at %>
+      </sub>
+    </p>
+  </div>
+</div>

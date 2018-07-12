@@ -5,6 +5,8 @@ validate:
   content_max_length: 50
 settings:
   per_page: 4
+  default_rows_texta: 8
+  default_star: 4
   precision: 0
   offset_dish: 0
   limit_dish: 5
@@ -18,5 +20,6 @@ settings:
   max_value_address: 100
   min_value_address: 4
   default_image_product: "http://www.ulladulla-indian-restaurant.com/wp-content/uploads/2016/08/full-hd-wallpaper-food-2.jpg"
+  default_image_user: "https://png.icons8.com/dotty/2x/administrator-male.png"
 setting_model:
   role_admin: 1

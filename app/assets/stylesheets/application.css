@@ -20,5 +20,6 @@
  *= require swiper.min.css
  *= require slick.css
  *= require slick-theme.css
+ *= require toastr
  *= require_self
  */

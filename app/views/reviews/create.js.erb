@@ -1,0 +1,8 @@
+<% if flash[:status] == false %>
+  toastr.error('<%= t "messages.review_error" %>')
+<% else %>
+  toastr.success('<%= t "messages.review_success" %>')
+  $('.load_user_comment').html('<%= j render partial: "reviews/comment",collection: @support.comments, as: :reviews %>')
+  $('#review_comment').val('')
+  $('.text-like p').text('<%= @dish.average_point.round %>')
+<% end %>

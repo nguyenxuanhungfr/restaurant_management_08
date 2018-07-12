@@ -27,8 +27,11 @@ en:
     home_deliver: "HOME DELIVERY"
   messages:
     error: "messages_errors"
+    review_error: "Review error"
+    review_success: "Review success"
     warning_size: "Warning size error"
     not_foud_menu: "Error ! Menu not found"
+    not_foud_dish: "Error ! Dish not found"
   users:
     register: "Create a acount"
     login: "Login"

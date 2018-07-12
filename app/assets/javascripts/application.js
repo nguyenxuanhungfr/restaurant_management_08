@@ -21,4 +21,6 @@
 //= require swiper.min.js
 //= require simpla.jquery.configuration.js
 //= require slick.min.js
+//= require toastr
+//= require turbolinks
 //= require main.js
