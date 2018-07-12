@@ -5079,3 +5079,14 @@ img.heart_point {
 input[type=datetime-local] {
   border-bottom: 1px solid $color_gray_01 !important;
 }
+
+.search_table {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 999999;
+}
+
+.find_table_parent > h2 {
+  color: $color_comment_box;
+}

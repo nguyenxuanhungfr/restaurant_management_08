@@ -1,5 +1,6 @@
 <section id="featured-pro-main-mqn">
   <div class="container table">
+    <h3 class="title"><strong><%= t "home.total_table" %></strong> <%= @tables.present? ? @tables.size : "0" %></h3>
     <%= render @tables %>
     <div class="margin_bottom20px float_right table--style_paginate">
       <%= paginate @tables, theme: "twitter-bootstrap-3" %>

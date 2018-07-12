@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :load_menu, :load_dish
+  before_action :load_menu, :load_dish, :load_type_table
 
   def create
     review = current_user.reviews.build review_params

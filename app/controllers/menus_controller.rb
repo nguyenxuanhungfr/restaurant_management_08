@@ -1,5 +1,5 @@
 class MenusController < ApplicationController
-  before_action :load_menu, :load_menu_by_id
+  before_action :load_menu, :load_menu_by_id, :load_type_table
 
   def show
     @dishes = @menu_data.dishes.ordered
