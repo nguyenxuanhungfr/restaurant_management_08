@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180711070008) do
+ActiveRecord::Schema.define(version: 20180712014644) do
 
   create_table "bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "total_amount"
@@ -93,6 +93,7 @@ ActiveRecord::Schema.define(version: 20180711070008) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status"
   end
 
   create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -156,6 +157,12 @@ ActiveRecord::Schema.define(version: 20180711070008) do
     t.index ["staff_id"], name: "index_working_days_on_staff_id"
   end
 
+  add_foreign_key "bills", "bookings"
+  add_foreign_key "bills", "users"
+  add_foreign_key "booking_details", "bookings"
+  add_foreign_key "booking_details", "dishes"
+  add_foreign_key "bookings", "tables"
+  add_foreign_key "bookings", "users"
   add_foreign_key "dishes", "categories"
   add_foreign_key "menu_dishes", "categories"
   add_foreign_key "menu_dishes", "dishes"

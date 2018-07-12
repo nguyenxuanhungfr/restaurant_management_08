@@ -1,0 +1,20 @@
+<% menus.each.with_index 1 do |menu, index| %>
+  <tr>
+    <td>
+      <%= index %>
+    </td>
+    <td>
+      <%= menu.name %>
+    </td>
+    <td>
+      <%= menu.status %>
+    </td>
+    <td>
+      <%= menu.created_at.strftime("%Y-%m-%d") %>
+    </td>
+    <td>
+      <%= link_to t("edit"), edit_admin_menu_path(menu),
+        class: "btn btn-primary" %>
+    </td>
+  </tr>
+<% end %>

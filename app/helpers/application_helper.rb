@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def load_menu
-    @menu = Menu.all
+    @menu = Menu.display
   end
 
   def load_menu_template menus

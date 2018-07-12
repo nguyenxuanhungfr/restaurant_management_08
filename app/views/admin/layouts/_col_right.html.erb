@@ -14,5 +14,13 @@
         <i class="mdi mdi-calendar-blank menu-icon"></i>
       <% end %>
     </li>
+    <% if correct_admin? current_admin.role %>
+      <li class="nav-item">
+        <%= link_to admin_menus_path, class: "nav-link" do %>
+          <span class="menu-title"><%= t "admin.menu.list_menu" %></span>
+          <i class="mdi mdi-calendar-blank menu-icon"></i>
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 </nav>
