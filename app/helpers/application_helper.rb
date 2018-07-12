@@ -39,12 +39,15 @@ module ApplicationHelper
     image_tag image
   end
 
-  def gravatar_for_dish dish
+  def gravatar_for_table dish
     if dish.images.first.nil?
-      image_tag Settings.settings.default_image_product,
-        alt: dish.name, class: "img-responsive"
+      image_tag Settings.settings.default_image_product, class: "img-responsive"
     else
-      image_tag dish.images.first.image_url, alt: dish.name, class: "img-responsive"
+      image_tag table.images.first.image_url, class: "img-responsive"
     end
+  end
+
+  def check_type_table? table
+    table.type_table == Settings.table.type_vip_table
   end
 end

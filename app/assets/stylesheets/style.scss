@@ -3628,9 +3628,11 @@ small {
 }
 
 .item-featured-pro-main-mqn {
-  border: 1px solid #e8edef;
+  border: 1px solid $color_gray_01;
+  max-height: 500px;
+  padding: 20px;
+  position: relative;
   width: 370px;
-  height: 500px;
 }
 
 .item-featured-pro-main-mqn img {
@@ -3666,9 +3668,8 @@ small {
 }
 
 .item-featured-pro-main-mqn p {
-  margin-left: 20px;
+  margin: 5px;
   font-style: 14px;
-  color: #5c6369;
 }
 
 .recipie-next-pro-detail {
@@ -5052,4 +5053,21 @@ label.star:before {
 img.heart_point {
   height: 30px;
   width: 30px;
+}
+
+.table__vip--type_table{
+  background: $type_table_green;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.table--style_paginate{
+  clear: both;
+  float: right;
 }
