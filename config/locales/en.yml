@@ -69,6 +69,11 @@ en:
     list_staffs: "List staffs"
     staffs: "Staffs"
     list_bookings: "List bookings"
+    stt: "STT"
+    name: "Name"
+    actions: "Actions"
+    createdate: "Create date"
+    status: "Status"
     staff:
         stt: "STT"
         staffs: "Staffs"
@@ -95,3 +100,6 @@ en:
         table_for: "Quantity : "
         book_now: "Book now"
         table_vip: "VIP: More 10% fare"
+    menu:
+        list_menu: "List Menu"
+        total_menu: "Total Menu"

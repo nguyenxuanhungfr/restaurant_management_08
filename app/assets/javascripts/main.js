@@ -22,3 +22,7 @@ var swiperV = new Swiper('.swiper-container-v', {
         clickable: true,
     },
 });
+
+$(document).ready(function() {
+  $('.link_to_menu').attr('href','javascript:void(0)');
+});
