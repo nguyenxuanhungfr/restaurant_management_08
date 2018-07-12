@@ -11,13 +11,13 @@
  * It is generally better to create a new file per style scope.
  *
  *= require bootstrap.min.css
+ *= require bootstrap-datetimepicker
  *= require color.scss
  *= require style.scss
  *= require materialize.css
  *= require bootstrap.css
  *= require mob.css
  *= require animate.css
- *= require bootstrap-timepicker
  *= require swiper.min.css
  *= require slick.css
  *= require slick-theme.css
