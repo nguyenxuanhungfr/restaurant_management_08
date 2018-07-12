@@ -21,4 +21,5 @@
 //= require swiper.min.js
 //= require simpla.jquery.configuration.js
 //= require slick.min.js
+//= require bootstrap-timepicker
 //= require main.js

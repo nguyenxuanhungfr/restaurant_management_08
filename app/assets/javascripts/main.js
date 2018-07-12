@@ -22,3 +22,6 @@ var swiperV = new Swiper('.swiper-container-v', {
         clickable: true,
     },
 });
+$(document).ready(function(){
+    $('.timepicker').timepicker()
+});
