@@ -18,6 +18,21 @@
           <%= @table.number_of_people %>
         </h4>
       </div>
+      <%= form_for :reservations, :url => { :controller => "reservations", :action => "create" }, :html => {:method => :post} do |f| %>
+        <%= f.hidden_field :table_id, value: @table.id %>
+
+        <div class="col-sm-3">
+          <%= f.date_field :date_start, class: "form-control" %>
+        </div>
+
+        <div class="col-sm-3">
+           <%= f.time_select :time_start, { prompt: {hour: 'Choose hour', minute: 'Choose minute'}, minute_step: 1 }, { class: 'form-control' } %>
+        </div>
+
+        <div class="col-sm-3">
+          <%= f.submit t("reserve_table"), class: "btn btn-primary submit_btn" %>
+        </div>
+      <% end %>
       <div class="form-group col-md-12">
         <div class='input-group date' id='datetimepicker1'>
           <input type='text' class="form-control" />
