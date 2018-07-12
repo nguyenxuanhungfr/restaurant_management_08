@@ -1,0 +1,49 @@
+<section id="item-product-details-shop-mqn">
+  <div class="container">
+    <div class="col-xs-12 col-sm-5 col-md-6 col-lg-6">
+      <div class="img-item-shop-detail item-featured-pro-main-mqn">
+        <%= gravatar_for_table @table %>
+        <% if check_type_table? @table %>
+          <p class="table__vip--type_table">
+            <%= t "admin.table.table_vip" %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-7 col-md-6 col-lg-6">
+      <div class="text-detail-shops-pro">
+        <h1><%= @table.description %></h1>
+        <h4>
+          <%= t "admin.table.table_for" %>
+          <%= @table.number_of_people %>
+        </h4>
+        <%= form_for :reservations, url: { controller: "reservations",
+            action: "create" }, html: { method: :post} do |f| %>
+          <%= f.hidden_field :table_id, value: @table.id %>
+          <div class="col-md-12 form-group">
+            <div class="col-md-4 nopadding">
+              <h5><%= t "home.table.time_start" %></h5>
+            </div>
+            <div class="col-sm-8 nopadding">
+              <%= f.datetime_local_field :date_start, required: true,
+                class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-12 form-group">
+            <div class="col-md-4 nopadding">
+              <h5><%= t "home.table.time_end" %></h5>
+            </div>
+            <div class="col-sm-8 nopadding">
+               <%= f.datetime_local_field :date_end, required: true,
+                 class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-sm-3 form-group">
+            <%= f.submit t("home.reserve_table"),
+              class: "btn btn-primary submit_btn" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

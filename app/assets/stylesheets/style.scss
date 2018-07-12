@@ -5055,7 +5055,7 @@ img.heart_point {
   width: 30px;
 }
 
-.table__vip--type_table{
+.table__vip--type_table {
   background: $type_table_green;
   border-radius: 50%;
   color: white;
@@ -5067,7 +5067,15 @@ img.heart_point {
   width: auto;
 }
 
-.table--style_paginate{
+.table--style_paginate {
   clear: both;
   float: right;
+}
+
+.nopadding {
+  padding: 0 !important;
+}
+
+input[type=datetime-local] {
+  border-bottom: 1px solid $color_gray_01 !important;
 }

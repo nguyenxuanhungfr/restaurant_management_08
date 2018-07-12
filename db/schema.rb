@@ -157,12 +157,6 @@ ActiveRecord::Schema.define(version: 20180712014644) do
     t.index ["staff_id"], name: "index_working_days_on_staff_id"
   end
 
-  add_foreign_key "bills", "bookings"
-  add_foreign_key "bills", "users"
-  add_foreign_key "booking_details", "bookings"
-  add_foreign_key "booking_details", "dishes"
-  add_foreign_key "bookings", "tables"
-  add_foreign_key "bookings", "users"
   add_foreign_key "dishes", "categories"
   add_foreign_key "menu_dishes", "categories"
   add_foreign_key "menu_dishes", "dishes"
