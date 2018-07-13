@@ -20,5 +20,6 @@ Rails.application.routes.draw do
     resources :bookings
     resources :menus
     resources :categories
+    resources :tables
   end
 end

@@ -23,9 +23,17 @@
       </li>
     <% end %>
     <% if correct_admin? current_admin.role %>
+        <li class="nav-item">
+          <%= link_to admin_categories_path, class: "nav-link" do %>
+            <span class="menu-title"><%= t "admin.menu.list_category" %></span>
+            <i class="mdi mdi-calendar-blank menu-icon"></i>
+        <% end %>
+      </li>
+    <% end %>
+    <% if correct_admin? current_admin.role %>
       <li class="nav-item">
-        <%= link_to admin_categories_path, class: "nav-link" do %>
-          <span class="menu-title"><%= t "admin.menu.list_category" %></span>
+        <%= link_to admin_tables_path, class: "nav-link" do %>
+          <span class="menu-title"><%= t "admin.table.list_table" %></span>
           <i class="mdi mdi-calendar-blank menu-icon"></i>
         <% end %>
       </li>

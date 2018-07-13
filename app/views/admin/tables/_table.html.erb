@@ -1,0 +1,20 @@
+<% tables.each.with_index 1 do |table, index| %>
+  <tr>
+    <td>
+      <%= index %>
+    </td>
+    <td>
+      <%= table.type_table %>
+    </td>
+    <td>
+      <%= table.name %>
+    </td>
+    <td>
+      <%= table.created_at.strftime("%Y-%m-%d") %>
+    </td>
+    <td>
+      <%= link_to t("edit"), edit_admin_table_path(table),
+        class: "btn btn-primary" %>
+    </td>
+  </tr>
+<% end %>

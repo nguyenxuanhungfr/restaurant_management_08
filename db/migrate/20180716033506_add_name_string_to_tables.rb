@@ -1,0 +1,5 @@
+class AddNameStringToTables < ActiveRecord::Migration[5.1]
+  def change
+     add_column :tables, :name, :string
+  end
+end

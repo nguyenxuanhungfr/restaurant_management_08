@@ -1,0 +1,22 @@
+<%= form_for [:admin, @table] do |f| %>
+  <%= render "admin/shared/error_messages", object: f.object %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :typetable %>
+  <%= f.select :type_table, options_for_select(@type_tables, selected: @type_tables[@table.type_table]), {}, class: "form-control" %>
+  <%= f.label :number %>
+  <%= f.number_field :number_of_people, class: "form-control" %>
+  <%= f.label :description %>
+  <%= f.text_area :description, class: "form-control" %>
+  <div class="form-group" id="images">
+    <%= f.fields_for :images do |image| %>
+      <%= render "image_fields", f: image %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association t(".add_image"), f, :images, class: "btn btn-default" %>
+    </div>
+  </div>
+  <div class="center">
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  </div>
+<% end %>
