@@ -12,6 +12,17 @@
             <%= @bookings.total_count ||= 0 %>
           </span>
         </h3>
+        <div class="nav search-row" id="top_menu">
+          <%= form_tag admin_bookings_path, method: :get do %>
+            <%= text_field_tag :search,
+              params[:search], class: "form-control sinput",
+                placeholder: t("enter_search_booking") %>
+            <%= button_tag type: "submit", class: "btn btn-primary",
+              name: nil do %>
+              <%= t "Search" %>
+            <% end %>
+          <% end %>
+        </div>
         <table class="table table-bordered">
           <thead>
             <tr>

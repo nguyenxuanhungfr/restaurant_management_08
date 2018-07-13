@@ -1,6 +1,7 @@
 en:
   hello: "Hello world"
   please_login: "Please login"
+  enter_search_booking: "Enter name or phone"
   menu:
     load_more: "Load more"
   home:
