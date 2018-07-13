@@ -1,0 +1,43 @@
+<%= provide :title, t("list_categories") %>
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <div class="overflow_hidden">
+          <h1 class="float_left"><%= t "list_categories" %></h1>
+          <%= link_to t("add_category"), new_admin_category_path, class: "btn btn-primary float_right" %>
+        </div>
+        <h3 class="title">
+          <strong><%= t "admin.staff.total_categories" %></strong>
+          <span class="red_color">
+            <%= @categories.total_count ||= 0 %>
+          </span>
+        </h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>
+                <%= t "stt" %>
+              </th>
+              <th>
+                <%= t "categories" %>
+              </th>
+              <th>
+                <%= t "status" %>
+              </th>
+              <th>
+                <%= t "actions" %>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "category", categories: @categories %>
+          </tbody>
+        </table>
+        <div class="margin_bottom20px float_right">
+          <%= paginate @categories, theme: 'twitter-bootstrap-3' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
