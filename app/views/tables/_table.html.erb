@@ -1,19 +1,21 @@
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
   <div class="item-featured-pro-main-mqn table">
-    <%= gravatar_for_table table %>
-    <h1>
-      <%= t "admin.table.table_for" %>
-      <%= table.number_of_people %>
-    </h1>
-    <p><%= table.description %></p>
-    <% if check_type_table? table %>
-      <p class="table__vip--type_table">
-        <%= t "admin.table.table_vip" %>
-      </p>
+    <%= link_to table_path(table) do %>
+      <%= gravatar_for_table table %>
+      <h1>
+        <%= t "admin.table.table_for" %>
+        <%= table.number_of_people %>
+      </h1>
+      <p><%= table.description %></p>
+      <% if check_type_table? table %>
+        <p class="table__vip--type_table">
+          <%= t "admin.table.table_vip" %>
+        </p>
+      <% end %>
+      <div class="center">
+        <%= link_to t("admin.table.book_now"), root_path,
+          class: "btn btn-primary" %>
+      </div>
     <% end %>
-    <div class="center">
-      <%= link_to t("admin.table.book_now"), root_path,
-        class: "btn btn-primary" %>
-    </div>
   </div>
 </div>

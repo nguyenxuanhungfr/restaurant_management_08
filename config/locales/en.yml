@@ -1,8 +1,10 @@
 en:
   hello: "Hello world"
+  please_login: "Please login"
   menu:
     load_more: "Load more"
   home:
+    same_time: "Same time, please choose other time"
     new_news: "Receive news"
     enter_email: "Enter your email address and subscribe daily newsletter"
     app_others: "Others application"
@@ -25,6 +27,12 @@ en:
     phone: "0164749056"
     call: "CALL US NOW FOR"
     home_deliver: "HOME DELIVERY"
+    reserve_table: "Reserve Table Now"
+    reserved_table_error: "You already reserved a table, you can order dish now!"
+    reserved_table: "You reserved table successful! You can order dish for table now!"
+    table:
+      time_start: "Time start:"
+      time_end: "Time end:"
   messages:
     error: "messages_errors"
     review_error: "Review error"

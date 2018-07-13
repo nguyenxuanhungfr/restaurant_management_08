@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :menus
   resources :reviews
   resources :categories
+  resources :reservations
   resources :tables
   namespace :admin do
     root "static_pages#home"
