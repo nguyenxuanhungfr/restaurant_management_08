@@ -91,6 +91,26 @@
       </div>
     </div>
   </div>
+  <div class="search_table">
+    <div class="center find_table_parent">
+      <h2><%= t "home.find_table" %></h2>
+    </div>
+    <div class="form__find_table">
+      <%= form_tag tables_path, method: :get do %>
+        <div class="col-md-5">
+          <%= number_field_tag :number, params[:search], class: "form-control" %>
+        </div>
+        <div class="col-md-5">
+          <%= select_tag :status, options_for_select(@type_tables), {class: "form-control"} %>
+        </div>
+        <div class="col-md-2">
+          <%= button_tag type: "submit", class: "btn btn-primary" do %>
+            <%= t "Search" %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 <section id="info-contact-pro-main">
   <div class="container">

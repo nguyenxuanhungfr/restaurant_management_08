@@ -1,5 +1,5 @@
 class DishesController < ApplicationController
-  before_action :load_menu, :load_dish
+  before_action :load_menu, :load_dish, :load_type_table
 
   def show
     @support = Supports::DishSupport.new @dish

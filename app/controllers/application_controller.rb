@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
     flash[:danger] = t "please_login"
     redirect_to login_path
   end
+
+  def load_type_table
+    @type_tables = Table.all.map{|c| c.type_table}.uniq
+  end
 end

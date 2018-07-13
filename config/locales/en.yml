@@ -6,6 +6,8 @@ en:
     load_more: "Load more"
   home:
     same_time: "Same time, please choose other time"
+    total_table: "Total table: "
+    find_success: "Find success"
     new_news: "Receive news"
     enter_email: "Enter your email address and subscribe daily newsletter"
     app_others: "Others application"
@@ -14,6 +16,8 @@ en:
     all_info: ", All rights reserved , Design Minh Quang Nguyen"
     menu: "Menu"
     home: "Home"
+    find_table: "Find table"
+    number_of_people: "Enter number_of_people"
     header:
       address: "Address : 124 , Vinh Tuy district, Ha Noi city"
       phone: "Phone: +84.1647419056"
