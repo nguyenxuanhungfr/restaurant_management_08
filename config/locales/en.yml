@@ -2,6 +2,11 @@ en:
   hello: "Hello world"
   please_login: "Please login"
   enter_search_booking: "Enter name or phone"
+  add_category: "Add category"
+  list_categories: "List categories"
+  edit_category: "Edit category"
+  create_category: "Create category"
+  save_category: "Save category"
   menu:
     load_more: "Load more"
   home:
@@ -64,6 +69,7 @@ en:
   flash:
     success_create_user: "Create success user"
   admin:
+    create_success: "Create success"
     base_title: "Restaurant Management"
     name_support: "Cán bộ hỗ trợ trực tiếp: Nguyễn Xuân Hưng"
     phone_support: "Bộ phận CSKH: 1900 1069"
@@ -97,6 +103,8 @@ en:
         actions: "Actions"
         total_staff: "Total Staffs:"
         role_admin: "admin"
+        total_categories: "Total categories"
+        total_bookings: "Total bookings"
     booking:
         stt: "STT"
         name: "Name"
@@ -116,3 +124,4 @@ en:
     menu:
         list_menu: "List Menu"
         total_menu: "Total Menu"
+        list_category: "List categories"
