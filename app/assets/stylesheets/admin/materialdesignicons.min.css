@@ -30427,3 +30427,7 @@ dl li {
     color: red;
     font-weight: bold;
 }
+
+.float_right {
+  margin-bottom: 20px;
+}

@@ -122,6 +122,14 @@ en:
         book_now: "Book now"
         table_vip: "VIP: More 10% fare"
     menu:
-        list_menu: "List Menu"
+        list_menu: "List Menus"
         total_menu: "Total Menu"
         list_category: "List categories"
+    table:
+        list_table: "List Tables"
+        total_table: "Total Table"
+        number_people_table: "Number people table"
+        edit_table: "Edit Table"
+        new_table: "New Table"
+        save_table: "Save Table"
+        add_table: "Add Table"
