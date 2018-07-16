@@ -4,6 +4,10 @@ validate:
   min_length_password: 6
   content_max_length: 50
 settings:
+  limit_dish_slibar: 2
+  limit_review_home: 5
+  limit_dish_home: 6
+  limit_category_home: 4
   per_page: 4
   default_rows_texta: 8
   default_star: 4

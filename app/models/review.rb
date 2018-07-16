@@ -5,4 +5,6 @@ class Review < ApplicationRecord
   validates :comment, presence: true
 
   delegate :name, :image, to: :user, allow_nil: true
+
+  scope :ordered, -> {order point: :desc}
 end
