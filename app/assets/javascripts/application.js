@@ -21,6 +21,10 @@
 //= require swiper.min.js
 //= require simpla.jquery.configuration.js
 //= require slick.min.js
+//= require showcategory.js
 //= require toastr
+//= require i18n
+//= require i18n.js
+//= require i18n/translations
 //= require turbolinks
 //= require main.js

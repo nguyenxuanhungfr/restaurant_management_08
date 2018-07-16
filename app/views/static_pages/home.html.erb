@@ -1,0 +1,108 @@
+<section id="background-pro-today-food">
+  <div class="container-fuild">
+    <h1 class="nomargin"><%= t "home.new_dish" %></h1>
+  </div>
+</section>
+<section id="blog-item" class="container">
+  <div id="myCarousel" class="carousel slide test" data-ride="false">
+    <div class="row">
+      <div class="carousel-inner">
+        <div class="item active">
+          <%= render partial: "dishes/dish_special",
+            collection: @support.dish_slibar, as: :dish_special %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="pizza-pro-mqn">
+  <%= image_tag "20-pizza-png-image.png" %>
+</section>
+<section id="botmi">
+  <%= image_tag "img13.png" %>
+</section>
+<section id="menu-main-pro-main-mqn">
+  <div class="rows pad-bot-redu tb-space">
+    <div class="container">
+      <div class="rows pad-bot-redu tb-space">
+        <div class="content-box">
+          <h3 class="title-fix-mob"><%= t "home.menu" %></h3>
+          <div class="content-box-header menu-hot">
+            <ul class="content-box-tabs">
+              <li>
+                <a href="" cate-id="" class="change_cate current">
+                  <%= image_tag "icon30.png" %>
+                  <br/><%= t "all" %>
+                </a>
+              </li>
+              <%= render partial: "show_category",
+              collection: @support.category, as: :category %>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="content-box-content">
+            <div class="tab-content default-tab" id="tab1">
+              <div class="loading">
+                <div class="loader"></div>
+              </div>
+              <div class="content_show_dish">
+                <%= render partial: "show_dish",
+                collection: @dishes, as: :dishes %>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="next-list-menu-pr">
+                <p>
+                  <a href=""><%= t "home.see_more" %>
+                    <div class="arrow-pro2">
+                      <%= image_tag "arrow-icon.png" %>
+                    </div>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="duiga">
+  <%= image_tag "wing-floating-full-vertical.png" %>
+</section>
+<section id="review-menber-pro-mqn-main">
+  <div class="container">
+    <div class="autoplay" role="toolbar">
+      <div class="item-review-menber">
+        <h1></h1>
+        <div class="phay-icon">
+          <%= image_tag "icon16.png" %>
+        </div>
+        <p>
+          <%= image_tag "icon17.png" %>
+        </p>
+        <div class="avt-review-menber">
+          <%= image_tag "16114994_744031582413865_8658927950213411337_n.jpg" %>
+          <p></p>
+          <ul>
+            <li>
+              <i class="glyphicon glyphicon-star"></i>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-star"></i>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-star"></i>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-star"></i>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-star"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

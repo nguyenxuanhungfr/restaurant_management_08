@@ -1,0 +1,5 @@
+<% if @list_dishes.present? %>
+  $('.content_show_dish').html('<%= j render partial: "static_pages/show_dish_change",collection: @list_dishes, as: :list_dishes %>')
+<% else %>
+  $('.content_show_dish').html("<div class='clear text-danger'>" + I18n.t('home.not_found_dish') + "</div>");
+<% end %>

@@ -1,5 +1,6 @@
 en:
   hello: "Hello world"
+  all: "All"
   please_login: "Please login"
   enter_search_booking: "Enter name or phone"
   add_category: "Add category"
@@ -10,6 +11,9 @@ en:
   menu:
     load_more: "Load more"
   home:
+    dolla: "$"
+    not_found_dish: "Not found dish"
+    see_more: "View more"
     same_time: "Same time, please choose other time"
     total_table: "Total table: "
     find_success: "Find success"
@@ -23,6 +27,7 @@ en:
     home: "Home"
     find_table: "Find table"
     number_of_people: "Enter number_of_people"
+    new_dish: "Today Special"
     header:
       address: "Address : 124 , Vinh Tuy district, Ha Noi city"
       phone: "Phone: +84.1647419056"

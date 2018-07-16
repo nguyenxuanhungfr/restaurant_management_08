@@ -1788,9 +1788,8 @@ figure.effect-bubba:hover p {
 
 #background-pro-today-food {
   background-color: #90A3B3;
-  background: url(../img/8b002776491beb880d221b5b9d9e2147.png) 100% 0 repeat fixed;
+  background: url(/assets/8b002776491beb880d221b5b9d9e2147.png) 100% 0 repeat fixed;
   min-height: 300px;
-  margin-top: 108px;
 }
 
 #background-pro-today-food h1 {
@@ -1998,7 +1997,7 @@ small {
 }
 
 #review-menber-pro-mqn-main {
-  background-image: url(../img/img12.png);
+  background-image: url(/assets/img12.png);
   min-height: 465px;
   background-size: cover;
   margin-top: -170px;
@@ -5076,6 +5075,10 @@ img.heart_point {
   padding: 0 !important;
 }
 
+.nomargin {
+  margin: 0 !important;
+}
+
 input[type=datetime-local] {
   border-bottom: 1px solid $color_gray_01 !important;
 }
@@ -5089,4 +5092,82 @@ input[type=datetime-local] {
 
 .find_table_parent > h2 {
   color: $color_comment_box;
+}
+
+#pizza-pro-mqn>img {
+  width: 20%;
+}
+
+#duiga>img {
+  width: 60%;
+}
+
+.clear {
+  clear: both;
+}
+
+.text-danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#tab1 {
+  overflow: hidden;
+  position: relative;
+}
+
+.loading {
+  background: $color_white;
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 9;
+}
+
+.loader {
+  background-color: $color_blue_01;
+  border-radius: 50%;
+  height: 50px;
+  left: 50%;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  &:after {
+    animation: loading 1000ms ease-out forwards infinite;
+    border-radius: 50%;
+    border: 0px solid $color_white;
+    content: '';
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes loading {
+  0% {
+    border: 0px solid $color_white;
+  }
+  20% {
+    border: 8px solid $color_white;
+    height: 0%;
+    width: 0%;
+  }
+  100% {
+    border: 8px solid $color_white;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.current {
+  color: $color_pink !important;
+}
+
+.change_cate:hover {
+  color: $color_pink !important;
 }
