@@ -5,9 +5,15 @@ validate:
   content_max_length: 50
 settings:
   limit_dish_slibar: 2
+  case_one: 1
+  case_two: 1
+  case_three: 1
+  case_four: 1
+  case_five: 1
   limit_review_home: 5
   limit_dish_home: 6
   limit_category_home: 4
+  limit_review_home: 5
   per_page: 4
   nomal: 0
   vip: 1

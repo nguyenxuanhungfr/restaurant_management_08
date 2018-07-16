@@ -1,0 +1,16 @@
+<div class="item-review-menber">
+  <div class="phay-icon">
+    <h1></h1>
+    <%= image_tag "icon16.png" %>
+  </div>
+  <p>
+    <%= reviews.comment %>
+    <%= image_tag "icon17.png" %>
+  </p>
+  <div class="avt-review-menber">
+    <p><%= reviews.name %></p>
+    <ul>
+      <%= count_point_review reviews.point.round(0) %>
+    </ul>
+  </div>
+</div>
