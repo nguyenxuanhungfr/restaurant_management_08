@@ -3663,12 +3663,10 @@ small {
 
 .item-featured-pro-main-mqn h1 {
   font-size: 26px;
-  margin-left: 20px;
   margin-bottom: 20px;
 }
 
 .item-featured-pro-main-mqn p {
-  margin: 5px;
   font-style: 14px;
 }
 
@@ -5241,4 +5239,41 @@ input[type=datetime-local] {
 
 .search>form>#search_auto_complete {
   height: inherit;
+}
+
+.image_item_table>img {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 498px;
+}
+
+.image_item_table {
+  padding: 20px;
+  height: 370px;
+}
+
+.all_image_table ul li {
+  list-style:none;
+  cursor: pointer;
+  height: 50px;
+  max-width: 15%;
+  display: inline-block;
+}
+
+.all_image_table ul li>img {
+  width: 100%;
+  height: 100%;
+}
+
+.all_image_table {
+  padding: 5px 20px;
+}
+
+.all_image_table ul {
+  padding: 0;
+}
+
+.image_item_table_parent {
+  border: 1px solid $color_gray3c;
 }

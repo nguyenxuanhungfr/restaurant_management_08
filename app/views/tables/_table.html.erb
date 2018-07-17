@@ -6,15 +6,14 @@
         <%= t "admin.table.table_for" %>
         <%= table.number_of_people %>
       </h1>
-      <p><%= table.description %></p>
+      <p><%= table.name %></p>
       <% if check_type_table? table %>
         <p class="table__vip--type_table">
           <%= t "admin.table.table_vip" %>
         </p>
       <% end %>
       <div class="center">
-        <%= link_to t("admin.table.book_now"), root_path,
-          class: "btn btn-primary" %>
+        <button class="btn btn-primary"><%= t "admin.table.book_now" %></button>
       </div>
     <% end %>
   </div>

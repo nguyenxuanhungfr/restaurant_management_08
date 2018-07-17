@@ -4,45 +4,44 @@ validate:
   min_length_password: 6
   content_max_length: 50
 settings:
-  limit_dish_slibar: 2
+  accept_file: "image/jpeg,image/gif,image/png"
+  case_five: 5
+  case_four: 4
   case_one: 1
-  case_two: 1
-  case_three: 1
-  case_four: 1
-  case_five: 1
-  min_money: 0
-  max_money: 1000000
-  vald_money: /\A\d+(?:\.\d{0,2})?\z/
-  limit_review_home: 5
-  limit_dish_home: 6
-  limit_category_home: 4
-  limit_review_home: 5
-  per_page: 4
-  nomal: 0
-  vip: 1
-  resize_to_limit: 400
-  size_image: 80
-  default_rows_texta: 8
-  default_star: 4
-  stock: "Stock"
-  stock_number: 1
-  out_of_stock: "Out of stock"
-  out_of_stock_number: 0
-  precision: 0
-  offset_dish: 0
-  limit_dish: 5
-  remember: 1
-  limit_product: 12
-  limit_product_slibar: 3
-  max_value_input: 1
-  max_size_image: 5
-  min_role: 1
-  max_role: 2
-  max_value_address: 100
-  min_value_address: 4
+  case_three: 3
+  case_two: 2
   default_image_product: "http://www.ulladulla-indian-restaurant.com/wp-content/uploads/2016/08/full-hd-wallpaper-food-2.jpg"
   default_image_user: "https://png.icons8.com/dotty/2x/administrator-male.png"
-  accept_file: "image/jpeg,image/gif,image/png"
+  default_rows_texta: 8
+  default_star: 4
+  limit_category_home: 4
+  limit_dish: 5
+  limit_dish_home: 6
+  limit_dish_slibar: 2
+  limit_product: 12
+  limit_product_slibar: 3
+  limit_review_home: 5
+  max_money: 1000000
+  max_role: 2
+  max_size_image: 5
+  max_value_address: 100
+  max_value_input: 1
+  min_money: 0
+  min_role: 1
+  min_value_address: 4
+  nomal: 0
+  offset_dish: 0
+  out_of_stock: "Out of stock"
+  out_of_stock_number: 0
+  per_page: 4
+  precision: 0
+  remember: 1
+  resize_to_limit: 400
+  size_image: 80
+  stock: "Stock"
+  stock_number: 1
+  vald_money: /\A\d+(?:\.\d{0,2})?\z/
+  vip: 1
 setting_model:
   role_admin: 1
 table:
