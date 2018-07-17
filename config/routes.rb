@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :menus
   resources :reviews
   resources :categories
-  resources :booking_details
+  post "/add_to_cart/:id", to: "booking_details#create", as: "add_to_cart"
   resources :reservations
   resources :tables
   namespace :admin do

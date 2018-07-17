@@ -12,7 +12,7 @@ class BookingDetailsController < ApplicationController
     else
       respond_to do |format|
         format.html{
-
+          flash[:warning] = t "require_booktable"
           redirect_to tables_path
         }
         format.js{
