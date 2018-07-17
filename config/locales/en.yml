@@ -12,6 +12,8 @@ en:
     load_more: "Load more"
   home:
     dolla: "$"
+    order_dish_success: "Order dish successfull!"
+    require_booktable: "Please book a table first!"
     not_found_dish: "Not found dish"
     see_more: "View more"
     same_time: "Same time, please choose other time"

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :menus
   resources :reviews
   resources :categories
+  resources :booking_details
   resources :reservations
   resources :tables
   namespace :admin do
