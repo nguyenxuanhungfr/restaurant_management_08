@@ -43,7 +43,7 @@ module ApplicationHelper
     if dish.images.first.nil?
       image_tag Settings.settings.default_image_product, class: "img-responsive"
     else
-      image_tag table.images.first.image_url, class: "img-responsive"
+      image_tag dish.images.first.url, class: "img-responsive"
     end
   end
 

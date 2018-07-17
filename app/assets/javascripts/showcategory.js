@@ -33,6 +33,13 @@ $(document).on('turbolinks:load', function(){
     e.preventDefault();
     $('.search').slideToggle();
   });
+
+  $('.all_image_table ul li>img').each(function(){
+    $(this).click(function(){
+      var url = $(this).attr('src');
+      $(this).parent().parent().parent().siblings().children().attr('src',url);
+    });
+  });
 });
 $(document).click(function(event) {
   if (!$(event.target).closest('#search_auto_complete,.result_search').length) {
