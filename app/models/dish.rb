@@ -8,8 +8,9 @@ class Dish < ApplicationRecord
   belongs_to :category
 
   scope :ordered, ->{order created_at: :desc}
-  scope :search_by_name, ->(name){where("name LIKE ? ",
-    "%#{name}%") if name.present?}
+  scope :search, ->(search){
+    where("name LIKE ? or description LIKE ?",
+    "%#{search}%", "%#{search}%") if search.present?}
   scope :filter_by_category, ->(category_id){where(category_id: category_id)if
     category_id.present?}
   scope :filter_by_status, ->(status){where(status: status) if status.present?}

@@ -11,7 +11,9 @@ en:
   menu:
     load_more: "Load more"
   home:
+    total_dish: "Total dish: "
     dolla: "$"
+    search: "Search"
     not_found_dish: "Not found dish"
     see_more: "View more"
     same_time: "Same time, please choose other time"

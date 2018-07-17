@@ -1,5 +1,11 @@
 class DishesController < ApplicationController
-  before_action :load_menu, :load_dish, :load_type_table
+  before_action :load_menu, :load_type_table
+  before_action :load_dish, only: [:show]
+
+  def index
+    @dishes = Dish.page(params[:page]).search(params[:search]).per Settings.settings.per_page
+    flash.now[:success] = t "home.find_success" if params[:search].present?
+  end
 
   def show
     @support = Supports::DishSupport.new @dish

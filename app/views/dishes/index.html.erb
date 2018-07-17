@@ -1,0 +1,9 @@
+<section id="featured-pro-main-mqn">
+  <div class="container table">
+    <h3 class="title"><strong><%= t "home.total_dish" %></strong> <%= @dishes.present? ? @dishes.total_count : "0" %></h3>
+    <%= render @dishes %>
+    <div class="margin_bottom20px float_right table--style_paginate">
+      <%= paginate @dishes, theme: "twitter-bootstrap-3" %>
+    </div>
+  </div>
+</section>
