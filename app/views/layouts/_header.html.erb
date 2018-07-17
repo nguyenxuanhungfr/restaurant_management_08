@@ -110,7 +110,8 @@
     <div class="form__find_table">
       <%= form_tag tables_path, method: :get do %>
         <div class="col-md-5">
-          <%= number_field_tag :number, params[:search], class: "form-control" %>
+          <%= number_field_tag :number, params[:search], required: true,
+            min: 1, class: "form-control" %>
         </div>
         <div class="col-md-5">
           <%= select_tag :status, options_for_select(@type_tables), {class: "form-control"} %>

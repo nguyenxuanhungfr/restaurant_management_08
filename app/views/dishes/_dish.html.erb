@@ -2,15 +2,21 @@
   <div class="item-menu-grid-view-mixed-mqn">
     <div class="ot-portfolio-item">
       <figure class="effect-bubba">
-        <figcaption></figcaption>
+        <%= link_to dish_path(dish) do %>
+          <%= gravatar_for_table dish %>
+        <% end %>
       </figure>
     </div>
     <div class="item-detail-text-menu-mixed">
       <h1><%= dish.name %></h1>
       <p><%= dish.description %></p>
-      <h2>
-        <%= number_format dish.price %>
-      </h2>
+      <div class="info_book">
+        <span class="info_book_price">
+          <%= number_format dish.price %>
+        </span>
+        <%= link_to t("add_to_booking"), root_path,
+          remote: true, method: :post, class: "btn2 btn btn-primary info_book_add" %>
+      </div>
     </div>
   </div>
 </div>

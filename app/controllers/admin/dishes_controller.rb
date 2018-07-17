@@ -4,7 +4,7 @@ class Admin::DishesController < Admin::BaseController
 
   def index
     @dishes = Dish.ordered.filter_by_category(params[:category_id])
-      .filter_by_status(params[:status]).search_by_name(params[:search])
+      .filter_by_status(params[:status]).search(params[:search])
       .page(params[:page]).per Settings.settings.per_page
 
     if params[:category_id].present? || params[:status].present? || params[:search].present?

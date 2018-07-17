@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on("turbolinks:load", function(){
   $('.link_to_menu').attr('href', 'javascript:void(0)');
   $('.autoplay').slick({
     slidesToShow: 1,

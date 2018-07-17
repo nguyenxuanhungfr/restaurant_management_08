@@ -1,9 +1,11 @@
 <div class="clear margin10 result_search_style">
-  <div class="col-md-2 nopadding">
-    <%= image_tag gravatar_for_table search_dishes %>
+  <div class="col-md-2 nopadding img_search_suggestion">
+    <%= gravatar_for_table search_dishes %>
   </div>
   <div class="col-md-10 content_result">
-    <a href=""><%= search_dishes.name %></a>
+    <%= link_to dish_path(search_dishes) do %>
+      <%= search_dishes.name %>
+    <% end %>
     <p class="price"><%= number_to_currency search_dishes.price %></p>
   </div>
 </div>

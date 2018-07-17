@@ -13,6 +13,7 @@ en:
   home:
     total_dish: "Total dish: "
     dolla: "$"
+    price: "Price: "
     search: "Search"
     not_found_dish: "Not found dish"
     see_more: "View more"

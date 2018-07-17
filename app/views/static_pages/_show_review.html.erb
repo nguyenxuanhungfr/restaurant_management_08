@@ -8,6 +8,7 @@
     <%= image_tag "icon17.png" %>
   </p>
   <div class="avt-review-menber">
+    <%= load_user_images reviews %>
     <p><%= reviews.name %></p>
     <ul>
       <%= count_point_review reviews.point.round(0) %>

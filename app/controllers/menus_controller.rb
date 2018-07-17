@@ -2,7 +2,8 @@ class MenusController < ApplicationController
   before_action :load_menu, :load_menu_by_id, :load_type_table
 
   def show
-    @dishes = @menu_data.dishes.ordered
+    @dishes = @menu_data.dishes.ordered.page(params[:page]).per Settings.settings.per_page
+    @load_category = Category.load_cate_of_menu(params[:id])
   end
 
   private

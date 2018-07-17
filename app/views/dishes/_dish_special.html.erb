@@ -2,8 +2,9 @@
   <a href="">
     <div class="ot-portfolio-item">
       <figure class="effect-bubba">
-        <%= image_tag("img9.png") %>
-        <figcaption></figcaption>
+        <%= link_to dish_path(dish_special) do %>
+          <%= gravatar_for_table dish_special %>
+        <% end %>
       </figure>
     </div>
     <div class="detail-text-food-today-pro">
