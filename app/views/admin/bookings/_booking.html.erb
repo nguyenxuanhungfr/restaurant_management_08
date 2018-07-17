@@ -7,9 +7,6 @@
       <%= booking.user_name %>
     </td>
     <td>
-      <%= booking.table_number_of_people %>
-    </td>
-    <td>
       <%= booking.time_start %>
     </td>
     <td>
@@ -21,15 +18,15 @@
     <td>
       <%= booking.name %>
     </td>
-    <td>
-      <%= booking.address %>
-    </td>
-    <td>
-      <%= booking.phone %>
-    </td>
-    <td>
-      <%= link_to t("edit"), edit_admin_booking_path(booking),
-        class: "btn btn-primary" %>
+    <td class="action">
+      <%= link_to t("view"), edit_admin_booking_path(booking),
+        class: "btn btn-primary edit_button" %>
+      <% if payment? booking %>
+        <%= link_to t("admin.bill.payment"), admin_payment_path(booking),
+          method: :put, remote: :true,
+          class: "btn btn-primary edit_button",
+          data: { confirm: t("admin.booking.confirm_payment") } %>
+      <% end %>
     </td>
   </tr>
 <% end %>

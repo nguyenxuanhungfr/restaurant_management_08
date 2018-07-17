@@ -17,6 +17,9 @@
             <%= text_field_tag :search,
               params[:search], class: "form-control sinput",
                 placeholder: t("enter_search_booking") %>
+            <%= select_tag :table_id, options_for_select(@tables),
+              {class: "form-control search_category",
+              include_blank: t("choose_table")} %>
             <%= button_tag type: "submit", class: "btn btn-primary",
               name: nil do %>
               <%= t "Search" %>
@@ -33,9 +36,6 @@
                 <%= t "admin.booking.name" %>
               </th>
               <th>
-                <%= t "admin.booking.table" %>
-              </th>
-              <th>
                 <%= t "admin.booking.time_start" %>
               </th>
               <th>
@@ -46,12 +46,6 @@
               </th>
               <th>
                 <%= t "admin.booking.receiver" %>
-              </th>
-              <th>
-                <%= t "admin.booking.address" %>
-              </th>
-              <th>
-                <%= t "admin.booking.phone" %>
               </th>
               <th>
                 <%= t "admin.booking.actions" %>

@@ -51,6 +51,10 @@ module ApplicationHelper
     table.type_table == Settings.table.type_vip_table
   end
 
+  def payment? booking
+   true unless booking.status == t("admin.bill.complete")
+  end
+
   def count_point_review point
     html = ""
     case point
