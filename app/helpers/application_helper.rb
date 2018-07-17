@@ -50,4 +50,29 @@ module ApplicationHelper
   def check_type_table? table
     table.type_table == Settings.table.type_vip_table
   end
+
+  def count_point_review point
+    html = ""
+    case point
+    when Settings.settings.case_one
+      html << "<li><i class=\"glyphicon glyphicon-star\"></i></li>"
+    when Settings.settings.case_two
+       Settings.settings.case_two.times do
+        html << "<li><i class=\"glyphicon glyphicon-star\"></i></li>";
+      end
+    when Settings.settings.case_three
+      Settings.settings.case_three.times do
+        html << "<li><i class=\"glyphicon glyphicon-star\"></i></li>";
+      end
+    when Settings.settings.case_four
+      Settings.settings.case_four.times do
+        html << "<li><i class=\"glyphicon glyphicon-star\"></i></li>";
+      end
+    when Settings.settings.case_five
+      Settings.settings.case_five.times do
+        html << "<li><i class=\"glyphicon glyphicon-star\"></i></li>";
+      end
+    end
+    html.html_safe
+  end
 end

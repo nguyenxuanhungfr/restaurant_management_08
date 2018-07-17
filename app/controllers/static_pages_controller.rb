@@ -22,6 +22,6 @@ class StaticPagesController < ApplicationController
   private
 
   def load_review
-    @reviews = Review.ordered.limit Settings.settings.limit_review_home
+    @reviews = Review.list_review.limit Settings.settings.limit_review_home
   end
 end

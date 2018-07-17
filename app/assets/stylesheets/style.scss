@@ -1,4 +1,5 @@
 @import 'color';
+@import 'bootstrap/glyphicons';
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -5170,4 +5171,9 @@ input[type=datetime-local] {
 
 .change_cate:hover {
   color: $color_pink !important;
+}
+
+.item-review-menber>p>img {
+  float: right;
+  margin-top: 20px;
 }

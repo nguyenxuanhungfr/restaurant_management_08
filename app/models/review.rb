@@ -7,4 +7,5 @@ class Review < ApplicationRecord
   delegate :name, :image, to: :user, allow_nil: true
 
   scope :ordered, -> {order point: :desc}
+  scope :list_review, ->{joins(:user).order("reviews.point desc")}
 end

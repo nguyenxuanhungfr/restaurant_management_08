@@ -73,36 +73,8 @@
 <section id="review-menber-pro-mqn-main">
   <div class="container">
     <div class="autoplay" role="toolbar">
-      <div class="item-review-menber">
-        <h1></h1>
-        <div class="phay-icon">
-          <%= image_tag "icon16.png" %>
-        </div>
-        <p>
-          <%= image_tag "icon17.png" %>
-        </p>
-        <div class="avt-review-menber">
-          <%= image_tag "16114994_744031582413865_8658927950213411337_n.jpg" %>
-          <p></p>
-          <ul>
-            <li>
-              <i class="glyphicon glyphicon-star"></i>
-            </li>
-            <li>
-              <i class="glyphicon glyphicon-star"></i>
-            </li>
-            <li>
-              <i class="glyphicon glyphicon-star"></i>
-            </li>
-            <li>
-              <i class="glyphicon glyphicon-star"></i>
-            </li>
-            <li>
-              <i class="glyphicon glyphicon-star"></i>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <%= render partial: "show_review",
+        collection: @reviews, as: :reviews %>
     </div>
   </div>
 </section>
