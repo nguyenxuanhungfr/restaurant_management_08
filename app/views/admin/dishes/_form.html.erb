@@ -1,0 +1,37 @@
+<%= form_for [:admin, @dish] do |f| %>
+  <%= render "admin/shared/error_messages", object: f.object %>
+  <div class="form-group">
+    <%= f.label :category_id %>
+    <%= f.collection_select :category_id, Category.order(:name), :id, :name,
+      {prompt: true}, {class: "form-control"} %>
+  </div>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+   <div class="form-group">
+     <%= f.label :price %>
+     <%= f.text_field :price, class: "form-control" %>
+   </div>
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.select :status, options_for_select(@dish_status,
+      selected: @dish_status[@dish.status]), {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
+  </div>
+  <div class="form-group" id="images">
+    <%= f.fields_for :images do |image| %>
+      <%= render "image_fields", f: image %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association t(".add_image"), f,
+        :images, class: "btn btn-default" %>
+    </div>
+  </div>
+  <div class="center">
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  </div>
+<% end %>

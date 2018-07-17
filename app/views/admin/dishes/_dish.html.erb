@@ -1,0 +1,20 @@
+<% dishes.each.with_index 1 do |dish, index| %>
+  <tr>
+    <td>
+      <%= index %>
+    </td>
+    <td>
+      <%= dish.name %>
+    </td>
+    <td>
+      <%= dish.status %>
+    </td>
+    <td>
+      <%= dish.created_at.strftime("%Y-%m-%d") %>
+    </td>
+    <td>
+      <%= link_to t("edit"), edit_admin_dish_path(dish),
+        class: "btn btn-primary" %>
+    </td>
+  </tr>
+<% end %>

@@ -1,4 +1,6 @@
 /* MaterialDesignIcons.com */
+@import 'color';
+
 @font-face {
     font-family: "Material Design Icons";
     src: url("../fonts/materialdesignicons-webfont.eot?v=2.1.19");
@@ -29709,10 +29711,16 @@ code {
 }
 
 select.form-control {
-    padding: .4375rem .75rem;
-    border: 0;
-    outline: 1px solid #ebedf2;
-    color: #c9c8c8;
+  border: 0;
+  color: $color_form_control;
+  margin-right: 20px;
+  outline: 1px solid $form_control_outline;
+  padding: .4375rem .75rem;
+}
+
+.sinput {
+  margin-right: 10px;
+  width: 28% !important;
 }
 
 select.form-control:focus {

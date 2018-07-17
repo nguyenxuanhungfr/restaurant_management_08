@@ -22,5 +22,6 @@ Rails.application.routes.draw do
     resources :menus
     resources :categories
     resources :tables
+    resources :dishes
   end
 end
