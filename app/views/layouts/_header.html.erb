@@ -72,6 +72,18 @@
                   </div>
                 </div>
               </li>
+              <li>
+                <a href="" id="seach"><i class="glyphicon glyphicon-search"></i></a>
+                <div class="search">
+                  <%= form_tag dishes_path, method: :get do %>
+                    <%= text_field_tag :search, params[:search],
+                      placeholder: t("home.search"), id: "search_auto_complete",
+                      class: "form-control" %>
+                  <% end %>
+                  <div class="result_search">
+                  </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>

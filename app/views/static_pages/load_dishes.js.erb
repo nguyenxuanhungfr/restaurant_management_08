@@ -1,0 +1,7 @@
+<% if @search_dishes.present? %>
+  $('.result_search').html(`<%= j render partial:
+    "static_pages/show_search_dishes",
+    collection: @search_dishes, as: :search_dishes %>`)
+<% else %>
+  $('.result_search').html("<div class='clear text-danger'>" + I18n.t('home.not_found_dish') + "</div>");
+<% end %>

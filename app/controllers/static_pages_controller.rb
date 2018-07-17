@@ -19,6 +19,14 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def load_dishes
+    search = params[:search].delete("\t\r\n").strip
+    @search_dishes = Dish.search_by_name(search) if search.present?
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
 
   def load_review
