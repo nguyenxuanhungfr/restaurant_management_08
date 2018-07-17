@@ -74,7 +74,9 @@ en:
   flash:
     success_create_user: "Create success user"
   admin:
-    create_success: "Create success"
+    choose_category: "Choose category"
+    choose_status: "Choose status"
+    update_success: "Update success"
     base_title: "Restaurant Management"
     name_support: "Cán bộ hỗ trợ trực tiếp: Nguyễn Xuân Hưng"
     phone_support: "Bộ phận CSKH: 1900 1069"
@@ -121,11 +123,6 @@ en:
         address: "Address"
         phone: "Phone"
         actions: "Actions"
-    table:
-        not_found_table: "Not found table"
-        table_for: "Quantity : "
-        book_now: "Book now"
-        table_vip: "VIP: More 10% fare"
     menu:
         list_menu: "List Menus"
         total_menu: "Total Menu"
@@ -144,3 +141,17 @@ en:
         new_table: "New Table"
         save_table: "Save Table"
         add_table: "Add Table"
+        not_found_table: "Not found table"
+        table_for: "Quantity : "
+        book_now: "Book now"
+        table_vip: "VIP: More 10% fare"
+    dish:
+        list_dish: "List Dish"
+        total_dish: "Total Dish"
+        edit_dish: "Edit Dish"
+        new_dish: "New Dish"
+        save_dish: "Save Dish"
+        add_dish: "Add Dish"
+        not_found: "Not found dish"
+        enter_name: "Enter name dish"
+        search_success: Search success"

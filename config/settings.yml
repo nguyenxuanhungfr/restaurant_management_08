@@ -10,6 +10,9 @@ settings:
   case_three: 1
   case_four: 1
   case_five: 1
+  min_money: 0
+  max_money: 1000000
+  vald_money: /\A\d+(?:\.\d{0,2})?\z/
   limit_review_home: 5
   limit_dish_home: 6
   limit_category_home: 4
@@ -21,6 +24,10 @@ settings:
   size_image: 80
   default_rows_texta: 8
   default_star: 4
+  stock: "Stock"
+  stock_number: 1
+  out_of_stock: "Out of stock"
+  out_of_stock_number: 0
   precision: 0
   offset_dish: 0
   limit_dish: 5
