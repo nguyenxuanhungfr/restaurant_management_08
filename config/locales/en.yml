@@ -130,6 +130,12 @@ en:
         list_menu: "List Menus"
         total_menu: "Total Menu"
         list_category: "List categories"
+        edit_menu: "Edit Menu"
+        new_menu: "New Menu"
+        add_menu: "Add Menu"
+        save_menu: "Save Menu"
+        create_success: "Create menu success"
+        update_success: "Update menu success"
     table:
         list_table: "List Tables"
         total_table: "Total Table"

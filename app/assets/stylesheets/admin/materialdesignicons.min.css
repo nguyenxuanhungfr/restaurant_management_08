@@ -30431,3 +30431,7 @@ dl li {
 .float_right {
   margin-bottom: 20px;
 }
+
+label.label-checkbox {
+  display: block;
+}
