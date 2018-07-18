@@ -1,0 +1,60 @@
+<% provide :title, t("admin.bill.show_bill") %>
+<% provide :button_text, t("admin.bill.show_bill") %>
+<div class="row">
+  <div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h1><%= t "admin.bill.user_booking" %></h1>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>
+                <%= t "admin.booking.name" %>
+              </th>
+              <th>
+                <%= t "admin.booking.receiver" %>
+              </th>
+              <th>
+                <%= t "admin.booking.phone" %>
+              </th>
+              <th>
+                <%= t "admin.booking.email" %>
+              </th>
+              <th>
+                <%= t "admin.booking.time_start" %>
+              </th>
+              <th>
+                <%= t "admin.booking.time_end" %>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "booking", booking: @support.booking %>
+          </tbody>
+        </table>
+        <h1><%= t "admin.bill.lits_dish" %></h1>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>
+                <%= t "admin.booking.name" %>
+              </th>
+              <th>
+                <%= t "admin.booking.quantity" %>
+              </th>
+              <th>
+                <%= t "admin.booking.price" %>
+              </th>
+              <th>
+                <%= t "admin.booking.total" %>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render partial: "dish", collection: @support.dish %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

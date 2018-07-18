@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     resources :bookings
     resources :payments
     resources :menus
+    resources :bills
     resources :categories
     resources :tables
     resources :dishes
