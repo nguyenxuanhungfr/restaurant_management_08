@@ -1,0 +1,113 @@
+<section id="check-out-pro-mqn">
+  <div class="container">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="form-pro-check-out">
+        <h1><%= t "home.time_book_table" %></h1>
+        <table>
+          <thead>
+            <tr>
+              <td><%= t "time_start" %></td>
+              <td><%= t "time_end" %></td>
+              <td><%= t "action" %></td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <%= current_cart["table"]["time_start"].
+                  to_time.strftime("%Y-%m-%d,%H:%M:%S") %>
+              </td>
+              <td>
+                <%= current_cart["table"]["time_end"].
+                  to_time.strftime("%Y-%m-%d,%H:%M:%S") %>
+              </td>
+              <td>
+                <%= link_to reservation_path(current_cart["table"]["table_id"]),
+                  remote: true,data: {confirm: t("home.confirm_destroy_table")},
+                  method: :delete do %>
+                  <span class="glyphicon glyphicon-remove-sign"></span>
+                <% end %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <%= link_to t("continue"), new_booking_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+      <div class="your-order-pro-mqn">
+        <div class="item-your-order-pro-mqn">
+          <h1><%= t "home.your_order" %></h1>
+          <table>
+            <thead>
+              <tr>
+                <th>
+                  <%= t "name" %>
+                </th>
+                <th>
+                  <%= t "price" %>
+                </th>
+                <th>
+                  <%= t "quantity" %>
+                </th>
+                <th>
+                  <%= t "price" %>
+                </th>
+                <th>
+                  <%= t "action" %>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <% unless @cart.empty? %>
+                <% @dishes_cart.each do |dish,quantity| %>
+                  <tr>
+                    <td>
+                      <div class="shop-details">
+                        <div class="productname">
+                          <%= dish.name %>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <h5><%= number_format dish.price %></h5>
+                    </td>
+                    <td>
+                      <%= form_tag cart_path(dish), method: :patch, remote: true do %>
+                        <%= number_field_tag :quantity, quantity %>
+                      <% end %>
+                    </td>
+                    <td>
+                      <h5 class="total_money">
+                        <strong class="red">
+                          <%= price_total_cart dish, quantity %>
+                        </strong>
+                      </h5>
+                    </td>
+                    <td>
+                      <%= link_to cart_path(dish),
+                        remote: true,method: :delete do %>
+                        <span class="glyphicon glyphicon-trash"></span>
+                      <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+              <% end %>
+            </tbody>
+          </table>
+          <table>
+            <tbody>
+              <tr>
+                <th><%= t "home.total_order" %></th>
+                <th><strong id="total"><%= number_format @total || 0 %></strong></th>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+          <div class="boder-pro-order-check-out"></div>
+          <div class="boder-pro-order-check-out2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -10,14 +10,19 @@ class ReservationsController < ApplicationController
       if find_table_of_booking.present?
         date_start_of_booking = find_table_of_booking.time_start.to_time
         date_end_of_booking = find_table_of_booking.time_end.to_time
-        if date_start > date_end_of_booking || date_start < date_start_of_booking
-          session[:reservation] = {}
-          session[:reservation].merge!({"table" => {"table_id" => params[:reservations][:table_id], "time_start" => date_start, "time_end" => date_end}})
-          flash[:success] = t "home.reserved_table"
-          redirect_to root_path
+        if date_start >= date_end_of_booking || date_start <= date_start_of_booking && date_end >= date_end_of_booking || date_end <= date_start_of_booking
+          if date_end > date_start
+            session[:reservation] = {}
+            session[:reservation].merge!({"table" => {"table_id" => params[:reservations][:table_id], "time_start" => date_start, "time_end" => date_end}})
+            flash[:success] = t "home.reserved_table"
+            redirect_to root_path
+          else
+            flash[:danger] = t "home.wrong_time"
+            redirect_to tables_path
+          end
         else
             flash[:danger] = t "home.same_time"
-            redirect_to root_path
+            redirect_to tables_path
         end
       else
         session[:reservation] = {}
@@ -27,7 +32,14 @@ class ReservationsController < ApplicationController
       end
     else
       flash[:danger] = t "home.reserved_table_error"
-      redirect_to root_path
+      redirect_to tables_path
     end
+  end
+
+  def destroy
+    session.delete(:cart)
+    session.delete(:reservation)
+    flash[:success] = t "home.destroy_book"
+    redirect_to tables_path
   end
 end

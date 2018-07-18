@@ -1,0 +1,26 @@
+Dear, <%= @user.name %> <br>
+<%= t "table_reserved" %> <br>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t "home.title_mailer" %></title>
+  </head>
+  <body>
+    <thead>
+      <tr>
+        <th>
+          <%= t "time_start" %>
+        </th>
+        <th>
+          <%= t "time_end" %>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @booking.time_start %></td>
+        <td><%= @booking.time_end %></td>
+      </tr>
+    </tbody>
+  </body>
+</html>

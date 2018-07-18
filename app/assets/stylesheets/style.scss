@@ -5328,3 +5328,45 @@ input[type=datetime-local] {
   max-height: 50px;
   width: 100%;
 }
+
+#quantity {
+  width: 50px;
+  color: $color_black;
+}
+
+.glyphicon-trash {
+  color: $color_white;
+}
+
+.glyphicon-warning-sign {
+  color: $color_red;
+  margin-right: 10px;
+  font-size: 50px;
+  margin-left: 20px;
+}
+
+.warning_review {
+  vertical-align: super;
+  font-size: 31px;
+  font-weight: bold;
+  color: red;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.load_user_comment {
+  max-height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.all_star {
+  font-size: 30px;
+  float: left;
+}
+
+.order_detail {
+  border: 1px solid $color_gray3c;
+}

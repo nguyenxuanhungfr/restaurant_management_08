@@ -17,9 +17,9 @@
             <ul>
               <li class="cart">
                 <%= image_tag "icon1.png" %>
-                <a href="">
-                  <number class="number-cart">1</number>
-                </a>
+                <%= link_to(carts_path)  do %>
+                  <number class="number-cart"><%= @count_dish_cart %></number>
+                <% end %>
               </li>
               <li class="book-table">
                 <div class="datban-boder">

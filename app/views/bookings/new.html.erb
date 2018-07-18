@@ -1,0 +1,32 @@
+<% provide :title, t("home.payment") %>
+<% provide :button_text, t("home.continue") %>
+<div class="container">
+  <div class="col-md-6 order_detail">
+    <h1><%= t "home.payment" %></h1>
+    <hr>
+    <%= form_for @booking do |f| %>
+      <%= f.hidden_field :table_id, value: current_cart["table"]["table_id"] %>
+      <%= f.hidden_field :time_start, value: current_cart["table"]["time_start"].to_time %>
+      <%= f.hidden_field :time_end, value: current_cart["table"]["time_end"].to_time %>
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, value: current_user.name ,class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :email, value: current_user.email ,class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :address, value: current_user.address ,class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :email %>
+        <%= f.text_field :phone, value: current_user.phone ,class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

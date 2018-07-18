@@ -39,6 +39,7 @@ module SessionsHelper
     forget current_user
     session.delete :user_id
     session.delete :reservation
+    session.delete :cart
     @current_user = nil
   end
 
