@@ -4,14 +4,14 @@
       <%= link_to dish_path(list_dishes) do %>
         <h1><%= list_dishes.name %></h1>
       <% end %>
-      <p><%= list_dishes.description %></p>
+      <p><%= list_dishes.description[0..60] %></p>
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
       <h2>
         <%= number_to_currency list_dishes.price %>
       </h2>
-      <%= link_to t("add_to_booking"), root_path,
-        remote: true, method: :post, class: "btn2 btn btn-primary" %>
+      <%= link_to t("add_to_booking"), add_to_cart_path(id: list_dishes.id),
+        remote: true,method: :post, class: "btn2 btn btn-primary" %>
     </div>
   </div>
   <div class="fix-border-pro-menu"></div>

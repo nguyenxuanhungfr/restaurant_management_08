@@ -1,0 +1,32 @@
+<% provide :title, t("cart") %>
+<% if current_cart.present? %>
+  <div class="container_fullwidth">
+    <div class="container shopping-cart">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="title">
+            <%= t "home.shopping_cart" %>
+          </h3>
+          <div class="clearfix">
+          </div>
+          <div class="ajax_cart">
+            <%= render "carts/cart" %>
+          </div>
+          <div class="clearfix">
+          </div>
+        </div>
+      </div>
+      <div class="clearfix">
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="container">
+    <div class="col-md-12">
+      <hr>
+      <div class="alert alert-warning">
+        <%= t".empty_cart" %>
+      </div>
+    </div>
+  </div>
+<% end %>

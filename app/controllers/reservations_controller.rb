@@ -30,4 +30,11 @@ class ReservationsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def destroy
+    session.delete(:cart)
+    session.delete(:reservation)
+    flash[:success] = t "home.destroy_book"
+    redirect_to root_path
+  end
 end

@@ -4,6 +4,7 @@ validate:
   min_length_password: 6
   content_max_length: 50
 settings:
+  default_quantity: 1
   accept_file: "image/jpeg,image/gif,image/png"
   case_five: 5
   case_four: 4
