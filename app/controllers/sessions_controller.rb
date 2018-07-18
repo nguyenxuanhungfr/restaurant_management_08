@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   before_action :load_menu, only: [:new, :destroy, :create]
+  before_action :load_type_table
 
   def new; end
 

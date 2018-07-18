@@ -1,9 +1,24 @@
 <section id="menu-grid-view-mixed-mqn">
   <div class="container">
-    <div class="title-menu-grid-view-mixed-mqn">
-      <h1><%= @menu_data.name %></h1>
+    <div class="container">
+      <div class="col-md-8">
+        <div class="title-menu-grid-view-mixed-mqn">
+          <h1><%= @menu_data.name %></h1>
+        </div>
+        <div class="show_dish_of_menu">
+          <%= render partial: "menus/dishes", collection: @dishes, as: :dishes %>
+        </div>
+        <div class="margin_bottom20px float_right col-md-12">
+          <%= paginate @dishes, theme: "twitter-bootstrap-3" %>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h1 class="center"><%= t "home.menu" %></h1>
+        <ul class="list_cate_of_menus">
+          <%= render partial: "menus/load_category", collection: @load_category, as: :load_category %>
+        </ul>
+      </div>
     </div>
-    <%= render partial: "menus/dishes", collection: @dishes, as: :dishes %>
   </div>
   <div class="boder-bottom-menu-mixed3"></div>
 </section>

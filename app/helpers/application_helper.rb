@@ -35,8 +35,11 @@ module ApplicationHelper
   end
 
   def load_user_images review
-    image = review.image || Settings.settings.default_image_user
-    image_tag image
+    if review.image.nil?
+      image_tag Settings.settings.default_image_user, class: "img-responsive"
+    else
+      image_tag review.image, class: "img-responsive"
+    end
   end
 
   def gravatar_for_table dish

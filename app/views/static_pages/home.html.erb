@@ -30,7 +30,7 @@
           <div class="content-box-header menu-hot">
             <ul class="content-box-tabs">
               <li>
-                <a href="" cate-id="" class="change_cate current">
+                <a href="" cate-id="" class="change_cate current link_to_menu">
                   <%= image_tag "icon30.png" %>
                   <br/><%= t "all" %>
                 </a>
@@ -52,13 +52,14 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <div class="next-list-menu-pr">
-                <p>
-                  <a href=""><%= t "home.see_more" %>
+                <%= link_to dishes_path do %>
+                  <p>
+                    <%= t "home.see_more" %>
                     <div class="arrow-pro2">
-                      <%= image_tag "arrow-icon.png" %>
+                        <%= image_tag "arrow-icon.png" %>
                     </div>
-                  </a>
-                </p>
+                  </p>
+                <% end %>
               </div>
             </div>
           </div>

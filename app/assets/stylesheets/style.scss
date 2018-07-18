@@ -3278,16 +3278,16 @@ small {
 .item-menu-grid-view-mixed-mqn h2 {
   color: #fea100;
   font-size: 26px;
-  margin-left: 25px;
+  // margin-left: 25px;
   border-top: 1px solid #e5e5e5;
-  width: 305px;
+  // width: 305px;
   padding: 26px 0px;
   margin-bottom: -10px;
 }
 
 .item-detail-text-menu-mixed {
   border: 1px solid #e5e5e5;
-  width: 350px;
+  // width: 350px;
 }
 
 .fix-pro-h1-menu-mixed {
@@ -4142,10 +4142,12 @@ small {
 .date-post-item-blog {
   background: #fea100;
   width: 87px;
+  display: inline-block;
+  float: left;
   height: 64px;
   padding: 5px 5px;
+  margin-right: 20px;
   color: white;
-  margin-top: 30px;
   text-align: center;
 }
 
@@ -4165,7 +4167,7 @@ small {
 }
 
 .text-item-blog {
-  margin-left: -95px;
+  // margin-left: -95px;
   margin-top: 40px;
 }
 
@@ -4176,7 +4178,7 @@ small {
 .text-item-blog p {
   font-size: 14px;
   color: #5c6369;
-  width: 700px;
+  // width: 700px;
 }
 
 .readmore-pro-blog-item {
@@ -4246,7 +4248,7 @@ small {
 }
 
 .item-post-blog-pro-mqn {
-  margin-bottom: 370px;
+  // margin-bottom: 370px;
 }
 
 .pagination-blog {
@@ -5276,4 +5278,53 @@ input[type=datetime-local] {
 
 .image_item_table_parent {
   border: 1px solid $color_gray3c;
+}
+
+.info_book {
+  padding: 10px;
+}
+
+.list_cate_of_menus li {
+  background: $color_red_01;
+  color: $color_white;
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+.list_cate_of_menus li:hover{
+  background: $color_red_02;
+}
+
+.active_menu {
+  background: $color_red_02;
+}
+
+.price_color-red {
+  color: $color_red;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.info_book {
+  overflow:hidden;
+}
+
+.info_book .info_book_price {
+  color: $color_red_02;
+  font-weight: bold;
+  font-size: 25px;
+  float: left;
+  margin-top: 10px;
+}
+
+.info_book .info_book_add {
+  float: right;
+}
+
+.img_search_suggestion>img {
+  max-height: 50px;
+  width: 100%;
 }

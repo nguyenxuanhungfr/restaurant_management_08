@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :load_menu, only: [:new, :create]
+  before_action :load_type_table
 
   def new
     @user = User.new
