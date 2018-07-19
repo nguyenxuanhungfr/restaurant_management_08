@@ -10,6 +10,7 @@ en:
   success_update_cart: "Update success"
   update_user_sucess: "Update success"
   edit_category: "Edit category"
+  need_login_checkout: "You need login to checkout"
   table_vip: "vip"
   create_category: "Create category"
   create_success: "Create success"
@@ -59,7 +60,7 @@ en:
     home: "Home"
     find_table: "Find table"
     number_of_people: "Enter number_of_people"
-    new_dish: "Today Special"
+    new_dish: "New Dish"
     header:
       address: "Address : 124 , Vinh Tuy district, Ha Noi city"
       phone: "Phone: +84.1647419056"

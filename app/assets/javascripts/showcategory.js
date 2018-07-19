@@ -1,6 +1,8 @@
 $(document).on('turbolinks:load', function(){
   $('.change_cate').click(function(){
     cate_id = $(this).attr('cate-id');
+    $(this).addClass("current");
+    $(this).parent().siblings().children().removeClass("current");
     $.ajax({
       url: 'show_category',
       method: 'GET',
@@ -47,4 +49,10 @@ $(document).click(function(event) {
     $('#search_auto_complete').attr('style', 'width: 130px')
   } else
   $('#search_auto_complete').attr('style', 'width: 100%')
+});
+$(window).load(function () {
+  $('.wrapper').addClass('loaded');
+  setTimeout(function(){
+    $('.wrapper').attr('style',"display:none");
+  },2000)
 });

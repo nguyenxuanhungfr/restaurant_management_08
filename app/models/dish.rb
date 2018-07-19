@@ -14,6 +14,7 @@ class Dish < ApplicationRecord
   scope :filter_by_category, ->(category_id){where(category_id: category_id)if
     category_id.present?}
   scope :filter_by_status, ->(status){where(status: status) if status.present?}
+  scope :load_dish_of_cate, ->(cate_id){joins("inner join menu_dishes as md on d.id = md.dish_id inner join categories as ct on ct.id = d.category_id where ct.id=2 group by d.name")}
 
   enum status: %i(out_of_stock stock)
 

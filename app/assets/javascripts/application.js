@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require jquery-latest.min.js
 //= require jquery-ui.js
 //= require bootstrap.js
 //= require wow.min.js
