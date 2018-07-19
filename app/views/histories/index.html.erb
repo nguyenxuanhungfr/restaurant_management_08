@@ -1,11 +1,4 @@
 <% provide :title, "History" %>
-<div class="page-index">
-  <div class="container">
-    <p>
-      <%= t "acount" %>
-    </p>
-  </div>
-</div>
 <div class="container_fullwidth">
   <div class="container">
     <div class="row">
@@ -13,6 +6,10 @@
         <div class="checkout-page">
           <ol class="checkout-steps">
             <li class="steps active">
+              <h3 class="title">
+                <strong><%= t "admin.dish.total_booking" %></strong>
+                <%= @history.size ||= 0 %>
+              </h3>
               <a href="#" class="step-title">
               <%= t "history" %>
               </a>

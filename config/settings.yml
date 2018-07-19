@@ -8,13 +8,15 @@ settings:
   accept_file: "image/jpeg,image/gif,image/png"
   case_five: 5
   case_four: 4
+  page_all_dish: 6
   case_one: 1
+  bill_success: 2
   case_three: 3
   case_two: 2
   default_image_product: "http://www.ulladulla-indian-restaurant.com/wp-content/uploads/2016/08/full-hd-wallpaper-food-2.jpg"
   default_image_user: "https://png.icons8.com/dotty/2x/administrator-male.png"
   default_rows_texta: 8
-  default_star: 4
+  default_star: 5
   limit_category_home: 4
   limit_dish: 5
   limit_dish_home: 6

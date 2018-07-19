@@ -3,7 +3,7 @@ class DishesController < ApplicationController
   before_action :load_dish, only: [:show]
 
   def index
-    @dishes = Dish.page(params[:page]).search(params[:search]).per Settings.settings.per_page
+    @dishes = Dish.page(params[:page]).search(params[:search]).per Settings.settings.page_all_dish
     flash.now[:success] = t "home.find_success" if params[:search].present?
   end
 

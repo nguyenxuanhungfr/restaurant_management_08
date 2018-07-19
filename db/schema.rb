@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180716033506) do
+ActiveRecord::Schema.define(version: 20180718082707) do
 
   create_table "bills", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "total_amount"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20180716033506) do
     t.bigint "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
     t.index ["booking_id"], name: "index_bills_on_booking_id"
     t.index ["user_id"], name: "index_bills_on_user_id"
   end
@@ -134,7 +135,6 @@ ActiveRecord::Schema.define(version: 20180716033506) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "picture"
     t.string "name"
   end
 
@@ -159,12 +159,6 @@ ActiveRecord::Schema.define(version: 20180716033506) do
     t.index ["staff_id"], name: "index_working_days_on_staff_id"
   end
 
-  add_foreign_key "bills", "bookings"
-  add_foreign_key "bills", "users"
-  add_foreign_key "booking_details", "bookings"
-  add_foreign_key "booking_details", "dishes"
-  add_foreign_key "bookings", "tables"
-  add_foreign_key "bookings", "users"
   add_foreign_key "dishes", "categories"
   add_foreign_key "menu_dishes", "categories"
   add_foreign_key "menu_dishes", "dishes"

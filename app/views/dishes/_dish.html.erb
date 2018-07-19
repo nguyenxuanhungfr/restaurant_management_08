@@ -9,7 +9,7 @@
     </div>
     <div class="item-detail-text-menu-mixed">
       <h1><%= dish.name %></h1>
-      <p><%= dish.description %></p>
+      <p><%= dish.description[0..70] %></p>
       <div class="info_book">
         <span class="info_book_price">
           <%= number_format dish.price %>

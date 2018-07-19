@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     resources :menus
     resources :categories
     resources :tables
+    resources :bills
+    resources :payments
     resources :dishes
   end
 end

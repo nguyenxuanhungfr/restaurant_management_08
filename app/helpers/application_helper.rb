@@ -16,7 +16,7 @@ module ApplicationHelper
         html << "<ul>"
           menu.dishes.limit(Settings.settings.limit_dish).offset(Settings.settings.offset_dish).each do |dishes|
             html << "<li>"
-             html << link_to(dishes.name, dish_path(dishes))
+             html << link_to(dishes.name[0..25], dish_path(dishes))
             html << "</li>"
           end
           if menu.dishes.limit(Settings.settings.limit_dish).offset(Settings.settings.offset_dish).length >= Settings.settings.limit_dish
@@ -51,7 +51,7 @@ module ApplicationHelper
   end
 
   def check_type_table? table
-    table.type_table == Settings.table.type_vip_table
+    table.type_table == t("table_vip")
   end
 
   def count_point_review point
@@ -101,6 +101,10 @@ module ApplicationHelper
       total += dish.price * quantity
     end
     total
+  end
+
+  def payment? booking
+   true unless booking.status == t("admin.bill.complete")
   end
 
   def price_total_cart dish, quantity
