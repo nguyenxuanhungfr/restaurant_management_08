@@ -18,9 +18,8 @@
               params[:search], class: "form-control sinput",
                 placeholder: t("enter_search_booking") %>
             <%= select_tag :table_id, options_for_select(@tables),
-              {class: "form-control search_category",
-              include_blank: t("choose_table")} %>
-            <%= button_tag type: "submit", class: "btn btn-primary",
+                 {class: "form-control search_statuses",include_blank: "Choose status"} %>
+            <%= button_tag type: "submit", class: "btn btn-primary submit_search",
               name: nil do %>
               <%= t "Search" %>
             <% end %>

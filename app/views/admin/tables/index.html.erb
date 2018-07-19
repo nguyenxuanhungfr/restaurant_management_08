@@ -6,6 +6,19 @@
         <div class="overflow_hidden">
           <h1 class="float_left"><%= t "admin.menu.list_menu" %></h1>
         </div>
+        <div class="nav search-row" id="top_menu">
+          <%= form_tag admin_tables_path, method: :get do %>
+            <%= text_field_tag :search,
+              params[:search], class: "form-control sinput",
+                placeholder: t("enter_search_booking") %>
+            <%= select_tag :table_id, options_for_select(@tables_status),
+                 {class: "form-control search_statuses",include_blank: "Choose status"} %>
+            <%= button_tag type: "submit", class: "btn btn-primary submit_search",
+              name: nil do %>
+              <%= t "Search" %>
+            <% end %>
+          <% end %>
+        </div>
         <h3 class="title">
           <strong><%= t "admin.menu.total_menu" %></strong>
           <span class="red_color">

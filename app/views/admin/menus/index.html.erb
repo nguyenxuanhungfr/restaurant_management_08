@@ -12,6 +12,19 @@
             <%= @menus.total_count ||= 0 %>
           </span>
         </h3>
+        <div class="nav search-row" id="top_menu">
+          <%= form_tag admin_menus_path, method: :get do %>
+            <%= text_field_tag :search,
+              params[:search], class: "form-control sinput",
+                placeholder: t("enter_search_booking") %>
+            <%= select_tag :table_id, options_for_select(@tables),
+                 {class: "form-control search_statuses",include_blank: "Choose status"} %>
+            <%= button_tag type: "submit", class: "btn btn-primary submit_search",
+              name: nil do %>
+              <%= t "Search" %>
+            <% end %>
+          <% end %>
+        </div>
         <%= link_to t("admin.table.add_menu"), new_admin_menu_path, class: "btn btn-primary float_right" %>
         <table class="table table-bordered">
           <thead>

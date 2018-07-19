@@ -1,9 +1,10 @@
 class Admin::CategoriesController < Admin::BaseController
-  before_action :logged_in_user, :admin_user, :load_status_category
+  before_action :logged_in_user, :admin_user, :load_status_category, :load_status
   before_action :load_category, except: %i(index new create)
 
   def index
-    @categories = Category.ordered.page(params[:page]).per Settings.settings.per_page
+    @categories = Category.search_by_type(params[:search])
+      .filter_by_table(params[:table_id]).ordered.page(params[:page]).per Settings.settings.per_page
   end
 
   def new
@@ -52,5 +53,9 @@ class Admin::CategoriesController < Admin::BaseController
 
   def load_status_category
     @category_status = Category.statuses.map { |value| value }
+  end
+
+  def load_status
+    @tables = Category.all.map{|c| [c.status]}.uniq
   end
 end

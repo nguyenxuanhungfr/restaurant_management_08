@@ -8,6 +8,8 @@ class Table < ApplicationRecord
   scope :ordered, ->{order created_at: :desc}
   scope :search_by_number_of_people, ->(number){where("number_of_people <= ?", number) if number.present?}
   scope :search_by_type_table, ->(type_table){where(type_table: type_table) if type_table.present?}
+  scope :search_by_type, ->(name){
+    where("name LIKE ?", "%#{name}%") if name.present?}
 
   validates :number_of_people, presence: true
   validates :name, presence: true

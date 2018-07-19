@@ -1,9 +1,10 @@
 class Admin::TablesController < Admin::BaseController
-  before_action :logged_in_user, :load_type_table, :admin_user
+  before_action :logged_in_user, :load_type_table, :admin_user, :load_status
   before_action :load_table, except: %i(index new create)
 
   def index
-    @tables = Table.ordered.page(params[:page]).per Settings.settings.per_page
+    @tables = Table.search_by_type(params[:search])
+      .search_by_type_table(params[:table_id]).ordered.page(params[:page]).per Settings.settings.per_page
   end
 
   def new
@@ -49,5 +50,9 @@ class Admin::TablesController < Admin::BaseController
     params[:table][:type_table] = params[:table][:type_table].to_i
     params.require(:table).permit :name, :type_table, :number_of_people, :description,
       images_attributes: [:id, :url, :_destroy]
+  end
+
+  def load_status
+    @tables_status = Table.all.map{|c| [c.type_table]}.uniq
   end
 end

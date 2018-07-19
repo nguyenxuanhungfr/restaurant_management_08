@@ -6,7 +6,6 @@ class Admin::BookingsController < Admin::BaseController
     @bookings = Booking.search_by_type(params[:search])
       .filter_by_table(params[:table_id])
       .page(params[:page]).per Settings.settings.per_page
-
     if params[:table_id].present? || params[:search].present?
       flash.now[:success] = t "admin.dish.search_success"
     end
@@ -45,6 +44,6 @@ class Admin::BookingsController < Admin::BaseController
   end
 
   def load_table
-    @tables = Table.all.map{|c| [c.name, c.id]}
+    @tables = Booking.all.map{|c| [c.status]}.uniq
   end
 end

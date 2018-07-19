@@ -14,6 +14,5 @@ class Booking < ApplicationRecord
 
   scope :search_by_type, ->(name){
     where("name LIKE ? or phone LIKE ?", "%#{name}%","%#{name}%") if name.present?}
-  scope :filter_by_table, ->(table_id){where(table_id: table_id)if
-    table_id.present?}
+  scope :filter_by_table, ->(table_id){where(status: table_id) if table_id.present?}
 end

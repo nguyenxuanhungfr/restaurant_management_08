@@ -10,4 +10,7 @@ class Category < ApplicationRecord
       inner join menu_dishes as md on d.id=md.dish_id
       where md.menu_id = #{menu_id}
       group by categories.id") if menu_id.present?}
+  scope :search_by_type, ->(name){
+    where("name LIKE ?", "%#{name}%") if name.present?}
+  scope :filter_by_table, ->(table_id){where(status: table_id) if table_id.present?}
 end
