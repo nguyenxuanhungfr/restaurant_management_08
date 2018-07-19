@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :menus
   resources :reviews
   resources :categories
+  resources :histories
   resources :carts
   resources :reservations
   resources :tables

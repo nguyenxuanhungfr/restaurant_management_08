@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :load_menu, :load_type_table
+  before_action :load_menu, :load_type_table, :cart_user
   before_action :check_cart, only: :new
 
   def new
@@ -10,6 +10,13 @@ class BookingsController < ApplicationController
     @booking = current_user.bookings.build booking_params
     @booking.status = :pending
     if @booking.save
+      @quantity_dish.each do |dish, quantity|
+          @booking_details = @booking.booking_details.new quantity: quantity,
+            dish_id: dish.id, price: dish.price
+          @booking_details.transaction do
+            raise t "error_order" unless @booking_details.save
+          end
+        end
       session.delete :reservation
       session.delete :cart
       UserMailer.user_mail(current_user, @booking).deliver_now
@@ -22,7 +29,17 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:time_start, :time_end, :table_id, :name,
-      :email, :address, :phone, booking_details_attributes: [:id, :quantity, :price, :booking_id, :dish_id])
+      :email, :address, :phone)
+  end
+
+  def cart_user
+    @cart = session[:cart] ? session[:cart] : Hash.new
+    @quantity_dish = @cart.map {|id, quantity| [Dish.find_by(id: id), quantity]}
+
+    if session[:cart].blank?
+      flash[:danger] = t :need_login_checkout
+      redirect_to root_url
+    end
   end
 
   def check_cart

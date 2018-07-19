@@ -5370,3 +5370,12 @@ input[type=datetime-local] {
 .order_detail {
   border: 1px solid $color_gray3c;
 }
+
+.search_booking #search {
+  width: 30%;
+  float: left;
+}
+
+input {
+  border: 1px solid #ccc !important;
+}

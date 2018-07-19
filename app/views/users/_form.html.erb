@@ -17,7 +17,13 @@
 
   <%= f.password_field :password_confirmation, class: "form-control",
     placeholder: t("users.password_confirmation") %>
-
+  <% if logged_in? %>
+    <div class="form-row">
+      <span class="picture">
+        <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+      </span>
+    </div>
+   <% end %>
   <div class="boder-bottom-foter-pro2"></div>
 
   <div class="fix-background-book-table2">

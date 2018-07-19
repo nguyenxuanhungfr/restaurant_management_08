@@ -10,10 +10,15 @@ en:
   success_update_cart: "Update success"
   edit_category: "Edit category"
   create_category: "Create category"
+  Enter_name: "Enter name or phone"
   save_category: "Save category"
   menu:
     load_more: "Load more"
   home:
+    signup: "Sign up"
+    edit_user: "Edit user"
+    save_change: "Save"
+    register: "Register"
     wrong_time: "Finish time must be after begin time, please select again!"
     payment: "Payment"
     title_mailer: "Table Reserved"

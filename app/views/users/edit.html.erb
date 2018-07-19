@@ -1,0 +1,30 @@
+<% provide(:title, t("home.edit_user")) %>
+<% provide(:button_text, t('home.save_change')) %>
+<div class="container_fullwidth">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="checkout-page">
+          <ol class="checkout-steps">
+            <li class="steps active">
+              <h1>
+                <%= yield(:title) %>
+              </h1>
+              <div class="step-description">
+                <%= link_to "View History Order", histories_path, class: "btn btn-primary" %>
+                <div class="row">
+                  <div class="col-md-offset-4 col-md-4">
+                    <%= image_tag current_user.image %>
+                  </div>
+                  <%= render "form" %>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix">
+    </div>
+  </div>
+</div>

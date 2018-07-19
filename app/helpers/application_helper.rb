@@ -35,7 +35,7 @@ module ApplicationHelper
   end
 
   def load_user_images review
-    if review.image.nil?
+    if review.image.blank?
       image_tag Settings.settings.default_image_user, class: "img-responsive"
     else
       image_tag review.image, class: "img-responsive"
@@ -85,6 +85,14 @@ module ApplicationHelper
 
   def bookingdetails_exist?
     session[:reservation] && session[:cart]
+  end
+
+  def total_money_order order
+    total = 0
+    order.each do |order|
+      total += order.price * order.quantity
+    end
+    number_format total
   end
 
   def total_cart dishes

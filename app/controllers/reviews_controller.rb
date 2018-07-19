@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     respond_to do |format|
       flash.now[:status] = review.save
       @support = Supports::DishSupport.new @dish
-      point = review.point + @dish.average_point
+      point = review.point.to_i + @dish.average_point.to_i
       @dish.rating point
       format.js
     end

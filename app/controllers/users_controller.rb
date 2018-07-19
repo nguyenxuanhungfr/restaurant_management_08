@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :load_menu, only: [:new, :create]
-  before_action :load_type_table
+  before_action :load_menu
+  before_action :logged_in_user, only: [:edit, :update]
+  before_action :load_type_table, :correct_user
 
   def new
     @user = User.new
@@ -18,10 +19,34 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+
+    if @user.update_attributes user_params
+      flash[:success] = t "update_user_sucess"
+      redirect_to root_url
+    else
+      render :new
+    end
+  end
+
   private
 
+  def correct_user
+    @user = User.find_by_id params[:id]
+    redirect_to root_url unless @user == current_user
+  end
+
+  def logged_in_user
+    unless logged_in?
+      flash[:danger] = t "please_login"
+      redirect_to login_url
+    end
+  end
+
   def user_params
-    params.require(:user).permit :email, :name, :address, :phone, :password,
+    params.require(:user).permit :email, :name, :image, :address, :phone, :password,
       :password_confirmation
   end
 end

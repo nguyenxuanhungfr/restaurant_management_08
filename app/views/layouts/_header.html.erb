@@ -29,7 +29,8 @@
               </li>
               <% if logged_in? %>
                 <li class="book-user">
-                  <%= link_to current_user.name, root_path %>
+                  <%= link_to current_user.name, edit_user_path(current_user),
+                    {class: "log"} %>
                 </li>
                 <li class="book-user">
                   <%= link_to t("users.logout"), logout_path, method: :delete %>
