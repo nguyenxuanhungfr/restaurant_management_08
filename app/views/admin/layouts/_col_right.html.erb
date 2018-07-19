@@ -54,5 +54,13 @@
         <% end %>
       </li>
     <% end %>
+    <% if correct_admin? current_admin.role %>
+      <li class="nav-item">
+        <%= link_to admin_bills_path, class: "nav-link" do %>
+          <span class="menu-title"><%= t "admin.bill.list_bill" %></span>
+          <i class="mdi mdi-calendar-blank menu-icon"></i>
+        <% end %>
+      </li>
+    <% end %>
   </ul>
 </nav>
