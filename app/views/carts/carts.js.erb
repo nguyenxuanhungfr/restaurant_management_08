@@ -1,0 +1,4 @@
+$('.ajax_cart').html('<%= j(render("carts/cart")) %>')
+$('.number-cart').text('<%= @count_dish_cart %>')
+$('#total').text('<%= number_format @total %>')
+toastr.success('<%= @mess %>')

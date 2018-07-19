@@ -82,4 +82,25 @@ module ApplicationHelper
     end
     html.html_safe
   end
+
+  def current_cart
+    session[:reservation]
+  end
+
+  def bookingdetails_exist?
+    session[:reservation] && session[:cart]
+  end
+
+  def total_cart dishes
+    total = 0
+    dishes.each do |dish,quantity|
+      total += dish.price * quantity
+    end
+    total
+  end
+
+  def price_total_cart dish, quantity
+    number = dish.price.to_i * quantity.to_i
+    number_to_currency(number, separator: ",")
+  end
 end
