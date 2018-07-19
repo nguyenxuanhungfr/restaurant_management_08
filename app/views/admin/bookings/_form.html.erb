@@ -1,0 +1,51 @@
+<%= form_for [:admin, @booking] do |f| %>
+  <%= render "admin/shared/error_messages", object: f.object %>
+  <div class="form-group">
+    <%= f.label :table_id %>
+    <%= f.collection_select :table_id, Table.order(:name), :id, :name,
+      {prompt: true}, {class: "form-control"} %>
+  </div>
+  <div class="form-group">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t "admin.boongking.dish_name" %></th>
+          <th><%= t "admin.boongking.quantity" %></th>
+          <th><%= t "admin.boongking.price" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <%= render partial: "dish", collection: @booking.booking_details, as: "dish" %>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="form-group">
+    <%= f.label :status %>
+    <%= f.select :status, options_for_select(@booking_status,
+      selected: @booking_status[@booking.status]), {}, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_area :name, class: "form-control", disabled: :true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_area :address, class: "form-control", disabled: :true %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone %>
+    <%= f.text_area :phone, class: "form-control", disabled: :true %>
+  </div>
+  <% if payment? @booking %>
+    <div class="center">
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    </div>
+  <% else %>
+    <div class="center">
+      <%= link_to t("back"), admin_bookings_path,
+        class: "btn btn-primary" %>
+    </div>
+  <% end %>
+<% end %>

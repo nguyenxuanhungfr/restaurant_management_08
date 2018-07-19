@@ -8,5 +8,10 @@ class Booking < ApplicationRecord
   delegate :name, to: :user, prefix: true
   delegate :number_of_people, to: :table, prefix: true
 
-  scope :search_by_type, ->(name){where("name LIKE ? or phone LIKE ?", "%#{name}%", "%#{name}%") if name.present?}
+  enum status: %i(pending serving complete)
+
+  scope :search_by_type, ->(name){
+    where("name LIKE ? or phone LIKE ?", "%#{name}%","%#{name}%") if name.present?}
+  scope :filter_by_table, ->(table_id){where(table_id: table_id)if
+    table_id.present?}
 end

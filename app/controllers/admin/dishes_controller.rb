@@ -1,5 +1,5 @@
 class Admin::DishesController < Admin::BaseController
-  before_action :logged_in_user, :load_status_dish, :map_category
+  before_action :logged_in_user, :load_status_dish, :load_category
   before_action :load_dish, except: %i(index new create)
 
   def index
@@ -57,7 +57,7 @@ class Admin::DishesController < Admin::BaseController
     @dish_status = Dish.statuses
   end
 
-   def map_category
+  def load_category
     @categories = Category.all.map{|c| [c.name, c.id]}
   end
 end
