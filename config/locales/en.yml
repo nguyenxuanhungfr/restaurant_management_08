@@ -11,6 +11,11 @@ en:
   edit_category: "Edit category"
   create_category: "Create category"
   save_category: "Save category"
+  edit_user: "Edit user"
+  save_user: "Save user"
+  list_users: "List users"
+  add_user: "Add user"
+  create_user: "Create user"
   menu:
     load_more: "Load more"
   home:
@@ -185,3 +190,8 @@ en:
         save_bill: "Save bill"
         complete: "complete"
         create_bill_success: "Create bill success"
+    menu:
+        list_menu: "List Menu"
+        total_menu: "Total Menu"
+        list_category: "List categories"
+        total_users: "Total users"

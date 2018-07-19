@@ -6,6 +6,8 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :tables, through: :bookings
 
+  mount_uploader :image, PictureUploader
+
   before_save :downcase_email
   attr_accessor :remember_token
   validates :name, presence: true,
@@ -16,6 +18,8 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true, allow_nil: true,
     length: {minimum: Settings.validate.min_length_password}
+
+  scope :ordered, ->{order created_at: :desc}
 
   has_secure_password
 

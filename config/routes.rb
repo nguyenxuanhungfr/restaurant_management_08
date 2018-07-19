@@ -28,5 +28,6 @@ Rails.application.routes.draw do
     resources :categories
     resources :tables
     resources :dishes
+    resources :users
   end
 end
