@@ -50,9 +50,3 @@ $(document).click(function(event) {
   } else
   $('#search_auto_complete').attr('style', 'width: 100%')
 });
-// $(window).load(function () {
-//   $('.wrapper').addClass('loaded');
-//   setTimeout(function(){
-//     $('.wrapper').attr('style',"display:none");
-//   },2000)
-// });

@@ -4129,10 +4129,12 @@ small {
 .item-special-rescrvations-2 h3 {
   font-size: 20px;
 }
-
+.item-blog-mqn{
+  max-width: 400px;
+}
 .item-blog-mqn img {
-  width: 845px;
-  height: 400px;
+  width: 100%;
+  max-height: 400px;
 }
 
 #blog-main-mqn {

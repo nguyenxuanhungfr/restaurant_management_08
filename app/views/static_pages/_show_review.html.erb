@@ -11,7 +11,7 @@
     <%= load_user_images reviews %>
     <p><%= reviews.name %></p>
     <ul>
-      <%= count_point_review reviews.point.round(0) %>
+      <%= count_point_review reviews.point.round(0) if reviews.point.present? %>
     </ul>
   </div>
 </div>

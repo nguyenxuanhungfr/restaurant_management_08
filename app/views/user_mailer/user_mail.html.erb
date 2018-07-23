@@ -6,21 +6,23 @@ Dear, <%= @user.name %> <br>
     <title><%= t "home.title_mailer" %></title>
   </head>
   <body>
-    <thead>
-      <tr>
-        <th>
-          <%= t "time_start" %>
-        </th>
-        <th>
-          <%= t "time_end" %>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= @booking.time_start %></td>
-        <td><%= @booking.time_end %></td>
-      </tr>
-    </tbody>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>
+            <%= t "time_start" %>
+          </th>
+          <th>
+            <%= t "time_end" %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><%= @booking.time_start.strftime("%B %e, %Y at %I:%M %p") %></td>
+          <td><%= @booking.time_end.strftime("%B %e, %Y at %I:%M %p") %></td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>

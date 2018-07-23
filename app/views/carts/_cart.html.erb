@@ -15,11 +15,11 @@
             <tr>
               <td>
                 <%= current_cart["table"]["time_start"].
-                  to_time.strftime("%Y-%m-%d,%H:%M:%S") %>
+                  to_time.strftime("%B %e, %Y at %I:%M %p") %>
               </td>
               <td>
                 <%= current_cart["table"]["time_end"].
-                  to_time.strftime("%Y-%m-%d,%H:%M:%S") %>
+                  to_time.strftime("%B %e, %Y at %I:%M %p") %>
               </td>
               <td>
                 <%= link_to reservation_path(current_cart["table"]["table_id"]),
@@ -74,7 +74,7 @@
                     </td>
                     <td>
                       <%= form_tag cart_path(dish), method: :patch, remote: true do %>
-                        <%= number_field_tag :quantity, quantity %>
+                        <%= number_field_tag :quantity, quantity,min: 1 %>
                       <% end %>
                     </td>
                     <td>
