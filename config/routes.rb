@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   resources :dishes
   resources :orders
+  resources :bookings
   resources :menus
   resources :reviews
   resources :categories

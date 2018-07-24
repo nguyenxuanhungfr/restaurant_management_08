@@ -19,6 +19,14 @@ en:
   menu:
     load_more: "Load more"
   home:
+    wrong_time: "Finish time must be after begin time, please select again!"
+    payment: "Payment"
+    title_mailer: "Table Reserved"
+    info_order: "Information order"
+    continue: "Continue"
+    order_success: "Booking successfull!"
+    cart_nil: "Not found dish in cart"
+    required_login: "Login to review"
     shopping_cart: "Shopping cart"
     total_order: "ORDER TOTAL"
     confirm_destroy_table: "Are you sure to delete?"
@@ -34,7 +42,7 @@ en:
     search: "Search"
     not_found_dish: "Not found dish"
     see_more: "View more"
-    same_time: "Same time, please choose other time"
+    same_time: "This table is reserved, please choose other time"
     total_table: "Total table: "
     find_success: "Find success"
     new_news: "Receive news"
