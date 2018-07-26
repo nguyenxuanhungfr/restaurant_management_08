@@ -21,6 +21,7 @@ en:
   home:
     wrong_time: "Finish time must be after begin time, please select again!"
     payment: "Payment"
+    total_booking_in_day: "Total bookings this day"
     title_mailer: "Table Reserved"
     info_order: "Information order"
     continue: "Continue"

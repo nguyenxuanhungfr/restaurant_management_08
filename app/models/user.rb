@@ -19,6 +19,8 @@ class User < ApplicationRecord
   validates :password, presence: true, allow_nil: true,
     length: {minimum: Settings.validate.min_length_password}
 
+  scope :total_member, ->{count(:id)}
+
   scope :ordered, ->{order created_at: :desc}
 
   has_secure_password

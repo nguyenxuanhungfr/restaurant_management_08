@@ -16,4 +16,6 @@ class Booking < ApplicationRecord
     where("name LIKE ? or phone LIKE ?", "%#{name}%","%#{name}%") if name.present?}
   scope :filter_by_table, ->(table_id){where(table_id: table_id)if
     table_id.present?}
+  scope :total_order, ->{count(:id)}
+  scope :number_of_orders_by_status, ->{group(:status).count(:id)}
 end

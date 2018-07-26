@@ -69,6 +69,7 @@ GEM
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
       mime-types (>= 1.16)
+    chartkick (2.3.4)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     cocoon (1.2.11)
@@ -460,6 +461,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   carrierwave
+  chartkick
   cocoon
   coffee-rails (~> 4.2)
   config
@@ -488,4 +490,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.2
+   1.16.3
