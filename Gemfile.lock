@@ -464,7 +464,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   carrierwave
   cocoon
-  coffee-rails (~> 4.2)
+  coffee-rails
   config
   faker
   figaro
