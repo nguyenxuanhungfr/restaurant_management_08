@@ -12,6 +12,10 @@ class User < ApplicationRecord
   attr_accessor :remember_token
   validates :name, presence: true,
    length: {maximum: Settings.validate.name_max_length}
+  validates :phone, presence: true,
+    length: {maximum: Settings.validate.phone_max_length}
+  validates :address, presence: true,
+    length: {maximum: Settings.validate.address_max_length}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
     length: {maximum: Settings.validate.email_max_length},
@@ -20,6 +24,7 @@ class User < ApplicationRecord
     length: {minimum: Settings.validate.min_length_password}
 
   scope :ordered, ->{order created_at: :desc}
+  scope :order_by_name, ->{order name: :desc}
 
   has_secure_password
 
