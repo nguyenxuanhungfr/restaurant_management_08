@@ -14,6 +14,7 @@ gem "coffee-rails", "~> 4.2"
 gem "config"
 gem "faker"
 gem "figaro"
+gem 'whenever', require: false
 gem "i18n-js"
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
