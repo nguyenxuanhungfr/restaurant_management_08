@@ -3,6 +3,8 @@ validate:
   name_max_length: 255
   min_length_password: 6
   content_max_length: 50
+  phone_max_length: 11
+  address_max_length: 255
 settings:
   default_quantity: 1
   accept_file: "image/jpeg,image/gif,image/png"
