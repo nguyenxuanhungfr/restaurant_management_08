@@ -4,7 +4,6 @@ class DishesController < ApplicationController
 
   def index
     @dishes = Dish.page(params[:page]).search(params[:search]).per Settings.settings.page_all_dish
-    flash.now[:success] = t "home.find_success" if params[:search].present?
   end
 
   def show

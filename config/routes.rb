@@ -25,11 +25,12 @@ Rails.application.routes.draw do
     resources :staffs
     resources :bookings
     resources :menus
-    resources :categories
     resources :tables
     resources :bills
     resources :users
     resources :payments
-    resources :dishes
+    resources :categories do
+      resources :dishes
+    end
   end
 end

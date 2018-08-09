@@ -16,6 +16,7 @@ class StaticPagesController < ApplicationController
     end
     respond_to do |format|
       format.js
+
     end
   end
 
